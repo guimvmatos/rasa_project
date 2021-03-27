@@ -29,3 +29,16 @@
 ## bot challenge
 * bot_challenge
   - utter_iamabot
+
+## pedido de boleto
+* greet
+  - utter_introduce_myself
+* boleto
+  - utter_boleto
+
+## pedido de diploma
+* greet
+  - utter_introduce_myself
+* diploma
+  - utter_diploma
+
