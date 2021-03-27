@@ -1,0 +1,76 @@
+###intenção do usuário:
+
+* Realizar estudo de intenção de usuário em atendimento com NAEM + NIT 
+
+boleto
+diploma
+
+Alguns exemplos:
+e-mail (suporte com senha, acesso, esqueci senha, resetar senhar, não sei o meu e-mail, não tenho e-mail, criar e-mail)
+
+fluig/unifeb digital (o que é o unifeb digital/fluig. suporte com acesso, senha, o que mais?)
+
+portal academico (o que é o portal academico. suporte com acesso, senha, o que mais?)
+
+classroom/sala de aula virtual/aula/meet (suporte com aulas, link, não consigo entrar, não sei qual é o link, não estou na sala, o que mais?)
+
+###Dominio do bot:
+
+ambiente educacional
+- suporte com solicitações referentes aos setores abaixo
+-- DTI (nit/nisi/ndt)
+-- secretaria
+-- financeiro
+
+
+Sugestões interessantes para o futuro:
+- ajudar alunos com outros tipos de problemas (depressão -> pro aluno)
+- previsão do tempo (pensar em algo para criar a vontade ou estimular a curiosidade do aluno)
+- cotação do dolar (pode jogar para um artigo próprio na rede social explicando ou para o curso de contabilidade)
+- teste vocacional (apresentar os cursos, jogar para o site da unifeb, talvez algum contato)
+
+
+
+###Modelo
+
+NLU apenas
+-> toda a interação por meio de textos escritos
+--> vantagem: interação mais fluida simulando de fato um atendente humano. Maior facilidade no desenvolvimento (easy)
+--> desvantagem: 
+
+Botões
+-> toda a interação por meio de Botões
+--> vantagem: fluxo fechado, como teleatendimento, onde o usuário conhece todas as opções de atendimento ao longo do caminho
+--> desvantagem: Maior dificuldade no desenvolvimento ((not so) hard). Perda da identidade
+
+híbrido
+-> interação inicia em NLU e pode-se apresentar botões para ajudar o usuário: exemplo: usuário escreve "financeiro" e o bot apresenta todas a opções com botões
+--> vantagem: há ainda uma interação fluida na qual se mantem a identidade, mas existe a possibilidade de apresentar ao usuário, quando for uma solicitação aberta, todas as opções
+--> desvantagem: dificuldade no desenvolvimento (medium)
+
+###Modelo de implantação
+
+SocketIO
+-> apenas copia o script no link da página
+
+RASA API
+-> construção de nova aplicação utilizando API
+
+O mais importante a ser levado em consideração aqui é se:
+-> Haverá integração entre o RASA e o Rocket.chat (omnichannel)? (Esta integração somente é necessária se o bot for repassar atendimento para dentro do rocket (atendimento naem, secretaria, financeiro, etc)
+
+-> as possibilidades aqui são:
+1 - não ter integração, mantem-se os dois botões na pagina (bot mostra o botão em caso de não solução)
+2 - sistema integrado, mas mantem-se os dois botões (bot repassa ou usuário pula o bot)
+3 - sistema integrado, retira o botão atual (unico caminho para omnichannel é pelo bot)
+
+Para ajudar na solução (levando-so em consideração que havera integração. Mudar as perguntas se não for este o cenário escolhido pelo time):
+
+-> Quais as vantagens de manter os dois botões?
+R:
+-> Quais as desvantagens de manter os dois botões?
+R:
+-> Quais as vantagens de manter apenas o bot?
+R:
+-> Quais as desvantagens de manter apenas o bot?
+R:

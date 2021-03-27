@@ -40,7 +40,6 @@
 - sem dúvida
 - com certeza
 
-
 ## intent:deny
 - no
 - never
@@ -53,7 +52,6 @@
 - acho que não
 - de jeito nenhum
 - infelizmente não
-
 
 ## intent:mood_great
 - perfect
@@ -70,7 +68,6 @@
 - perfeito
 - estou bem
 - estou ótimo
-- 
 
 ## intent:mood_unhappy
 - sad

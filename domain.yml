@@ -1,4 +1,3 @@
----
 intents:
   - greet
   - goodbye
@@ -12,7 +11,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: Hi, how are you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -28,13 +27,13 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot. Mas fui programado com muito carinho e cuidado especialmente para você. Portanto, tenha o mesmo carinho por mim :)"
+  - text: "Eu sou um bot, mas saiba que fui programado com muito carinho e cuidado especialmente para você. Portanto, tenha o mesmo carinho por mim :)"
 
   utter_introduce_myself:
   - text: "Olá, eu sou Gothan, assistente virtual da UNIFEB. Em que posso ajuda-lo?"
 
   utter_boleto:
-  - text: "Para realizar o pagamento do seu boleto, para o download dele em: http://savethesounds.info/. Você pode ver um vídeo tutorial de como realizar esta ação aqui: https://www.youtube.com/watch?v=OgO2U4quFDk. Caso deseja outras opções relacionadas à boleto, entre em contato com nosso setor financeiro"
+  - text: "Para realizar o pagamento do seu boleto realize o download dele em: http://savethesounds.info/. Você pode ver um vídeo tutorial de como realizar esta ação aqui: https://www.youtube.com/watch?v=OgO2U4quFDk. Caso deseja outras opções relacionadas à boleto, entre em contato com nosso setor financeiro"
 
   utter_diploma:
   - text: "Você pode realizar o download do seu diploma em: https://arkadia.xyz/. Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. Para saber mais, entre em contato com nossa secretaria academica"
