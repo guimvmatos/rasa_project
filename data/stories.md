@@ -1,26 +1,6 @@
-## happy path
+## greet
 * greet
-  - utter_greet
-* mood_great
-  - utter_happy
-
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
+  - utter_introduce_myself
 
 ## say goodbye
 * goodbye
@@ -31,14 +11,28 @@
   - utter_iamabot
 
 ## pedido de boleto
-* greet
-  - utter_introduce_myself
 * boleto
   - utter_boleto
 
 ## pedido de diploma
-* greet
-  - utter_introduce_myself
 * diploma
   - utter_diploma
+
+## conhecer o aluno
+* cadastro
+  - aluno_form
+  - form{"name":"aluno_form"}
+  <!---- form("name":null) --->
+
+  ## obter dados o aluno
+* cadastro
+  - utter_introduce_yourself
+  - utter_nome
+  - aluno_form
+  - form{"name":"aluno_form"}
+* form
+  - aluno_form
+  <!---- form("name":null) --->
+
+
 
