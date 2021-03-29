@@ -8,26 +8,7 @@ intents:
   - bot_challenge
   - boleto
   - diploma
-  - intrisico
-  - cadastro
-  - form
   
-slots:
-  nome:
-    type: unfeaturized
-  RA:
-    type: unfeaturized
-  email:
-    type: unfeaturized
-  celular:
-    type: unfeaturized
-
-entities:
-  - nome
-  - ra
-  - email  
-  - celular
-
 responses:
 
   utter_goodbye:
@@ -39,26 +20,11 @@ responses:
   utter_introduce_myself:
   - text: "Olá, eu sou Gothan, assistente virtual da UNIFEB. Em que posso ajuda-lo?"
 
-  utter_introduce_yourself:
-  - text: "Para melhor conhece-lo, gostaria que respondesse algumas perguntas."
-
   utter_boleto:
   - text: "Para realizar o pagamento do seu boleto realize o download dele em: http://savethesounds.info/. Você pode ver um vídeo tutorial de como realizar esta ação aqui: https://www.youtube.com/watch?v=OgO2U4quFDk. Caso deseja outras opções relacionadas à boleto, entre em contato com nosso setor financeiro"
 
   utter_diploma:
   - text: "Você pode realizar o download do seu diploma em: https://arkadia.xyz/. Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. Para saber mais, entre em contato com nossa secretaria academica"
-
-  utter_nome:
-  - text: "Qual seu nome completo?"
-  utter_ra:
-  - text: "qual seu ra:"
-  utter_email:
-  - text: "qual seu e-mail:"
-  utter_cel:
-  - text: qual o seu número de celular?
-
-forms:
-  - aluno_form
 
 session_config:
   session_expiration_time: 60
