@@ -8,7 +8,28 @@ intents:
   - bot_challenge
   - boleto
   - diploma
-  
+  - inform
+  - thankyou
+  - out_of_scope
+
+  entities:
+  - exercise
+  - sleep
+  - stress
+
+  slots:
+    confirm_exercise:
+      type: unfeaturized
+    exercise: 
+      type: unfeaturized
+    sleep:
+      type: unfeaturized
+    diet:
+      type: unfeaturized
+    stress:
+      type: unfeaturized
+    goal:
+      type: unfeaturized
 responses:
 
   utter_goodbye:
@@ -25,6 +46,50 @@ responses:
 
   utter_diploma:
   - text: "Você pode realizar o download do seu diploma em: https://arkadia.xyz/. Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. Para saber mais, entre em contato com nossa secretaria academica"
+
+  utter_ask_confirm_exercise:
+  - text: "Did you exercise yesterday? don't sweat it if you didn't run a marathon - walks count!"
+
+  utter_ask_exercise:
+  - text: "what kink of exercise did you do?"
+
+  utter_ask_sleep:
+  - text: "How much sleep did you get last night?"
+
+  utter_askt_diet:
+  - text: "did you stick to a healthy diet yesterday?"
+
+  utter_ask_stress:
+  - text: "What is your stress level right now?"
+    buttons:
+      - title: "low"
+        payload: '/inform{"stress": "low"}'
+      - title: "medium"
+        payload: '/inform{"stress":"medium"}'
+      - title: "high"
+        payload: '/inform{"stress":"high"}'
+
+  utter_ask_goal:
+  - text: "Setting goals - even small ones - is a great way to focus your day. What do you want do accomplish today?"
+
+  utter_slots_values:
+  - text: "You'se submitted the following answers: \n
+            - Exercised?: {confirm_exercise}\n
+            - Type of exercise: {exercise}\n
+            - Sleep: {sleep}\n
+            - Stuck to a healthy diet? {diet}\n
+            - Stress level: {stress}\n
+            - Goal: {goal}"
+
+  utter_no_worries:
+  - text: "No problem :)"
+
+  utter_ast_continue:
+  - text: "Sorry, I don't quite understand. Do you want do continue?"
+
+forms: 
+  - health_form
+
 
 session_config:
   session_expiration_time: 60
