@@ -22,13 +22,11 @@
 * greet
   - utter_introduce_myself
 * affirm
-    - health_form
-    - form{"name": "health_form"}
+    - aluno_form
+    - form{"name": "aluno_form"}
     - form{"name": null}
     - utter_slots_values
-* thankyou
-    - utter_no_worries
-    - utter_goodbye
+    - utter_what_can_i_help
 
 ## no survey
 * greet
@@ -40,8 +38,8 @@
 * greet
     - utter_introduce_myself
 * affirm
-    - health_form
-    - form{"name": "health_form"}
+    - aluno_form
+    - form{"name": "aluno_form"}
 * out_of_scope
     - utter_ask_continue
 * deny
@@ -53,11 +51,11 @@
 * greet
     - utter_introduce_myself
 * affirm
-    - health_form
-    - form{"name": "health_form"}
+    - aluno_form
+    - form{"name": "aluno_form"}
 * out_of_scope
     - utter_ask_continue
 * affirm
-    - health_form
+    - aluno_form
     - form{"name": null}
     - utter_slots_values

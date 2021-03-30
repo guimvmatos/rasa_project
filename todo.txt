@@ -74,3 +74,5 @@ R:
 R:
 -> Quais as desvantagens de manter apenas o bot?
 R:
+
+By: Guilherme Matos

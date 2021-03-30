@@ -113,46 +113,38 @@
 - meu diploma esta pronto?
 
 ## intent:inform
+- meu nome é [guilherme mendes](nome)
+- nome: [patricia angelucci](nome)
+- [Leonardo Ventura Alves](nome)
+- Meu ra é: [512203](ra)
+- RA: [530230](ra)
+- [528957](ra)
+- meu e-mail é: [guilherme.matos@sou.unifeb.edu.br](email)
+- email: [cleber.dti@sou.unifeb.edu.br](email)
+- [unifeb@sou.unifeb.edu.br](email)
+- [guimvmatos@outlook.com](email)
+- [***@gmail.com](email)
+- meu telefone é: [17988139323](telefone)
+- telefone: [988002233](telefone)
+- celular: [923423433](telefone)
+- celular: [17988234567](telefone)
 - a full [8 hours](sleep)
 - only [four hours](sleep)
 - about [six hours](sleep)
-- [low](stress)
-- [medium](stress)
-- [high](stress) stress right now
-- Yes, I went for a [run](exercise)
-- uh huh an hour of [yoga](exercise)
-- yep, I went for a [hike](exercise)
-- Yes I took the dog for a [walk](exercise)
-- Yeah, I played [tennis](exercise)
-- I went [swimming](exercise)
-- Took a [spin class](exercise)
-- Did some [boxing](exercise)
-- [rock climbing](exercise)
-- played some [basketball](exercise)
-- played [football](exercise)
-- I did a [workout](exercise) video
-- I want to get up early and go for a run
-- Be more patient with my family
-- Try to be a better friend
-- Make sure to eat better tomorrow
-- eat less junk food
-- eat better
-- spend less time on my phone
-- don't procrastinate
-- Go to bed earlier
-- Don't stay up so late
-- try to make some time to meditate
-- i ate pretty healthy overall
-- lots of fruits and vegetables
-- I ate a salad
-- too many snacks
-- too many sweets
-- too much junk food
-- a lot of carbs
-- too much fatty food
-- Get more exercise
+- [sim] já possuo e-mail institucional(have_email)
 
 ## intent:out_of_scope
+- Porque precisa do meu nome?
+- não quero mais continuar
+- não quero informar
+- não sei
+- não quero saber
+- quero sair
+- voltar
+- cancelar
+- qual a previsão do tempo
+- não é da sua conta
+- isto não esta certo
 - that's not what I want to do
 - wait stop
 - you're no help
@@ -176,3 +168,8 @@
 - thank you
 - sure thanks
 - thanks bye
+- obrigado
+- muito obrigado
+- agradecido
+- agradeço
+- ok, obrigado

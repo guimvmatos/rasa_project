@@ -13,22 +13,22 @@ intents:
   - out_of_scope
 
 entities:
-  - exercise
-  - sleep
-  - stress
+  - nome
+  - ra
+  - have_email
+  - email
+  - telefone
 
 slots:
-  confirm_exercise:
+  nome:
     type: unfeaturized
-  exercise:
+  ra:
     type: unfeaturized
-  sleep:
+  have_email:
     type: unfeaturized
-  diet:
+  email:
     type: unfeaturized
-  stress:
-    type: unfeaturized
-  goal:
+  telefone:
     type: unfeaturized
 
 responses:
@@ -40,7 +40,13 @@ responses:
   - text: "Batman, Gothan precisa de ajuda!"
 
   utter_introduce_myself:
-  - text: "Olá, eu sou Gothan, assistente virtual da UNIFEB. Em que posso ajuda-lo?"
+  - text: "Olá, eu sou Gothan, assistente virtual da UNIFEB. Para melhor atende-lo, gostaria que me informasse algumas informações, como seu nome, RA, e-mail e telefone. Podemos começar?"
+
+  utter_limited_actions:
+  - text: "Sem seus dados talvez não consiga te ajudar da forma como gostaria. No entanto, vamos tentar. Em que posso te ajudar?"
+
+  utter_what_can_i_help:
+  - text: "Em que posso te ajudar?"
 
   utter_boleto:
   - text: "Para realizar o pagamento do seu boleto realize o download dele em: http://savethesounds.info/. Você pode ver um vídeo tutorial de como realizar esta ação aqui: https://www.youtube.com/watch?v=OgO2U4quFDk. Caso deseja outras opções relacionadas à boleto, entre em contato com nosso setor financeiro"
@@ -48,48 +54,44 @@ responses:
   utter_diploma:
   - text: "Você pode realizar o download do seu diploma em: https://arkadia.xyz/. Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. Para saber mais, entre em contato com nossa secretaria academica"
 
-  utter_ask_confirm_exercise:
-  - text: "Did you exercise yesterday? don't sweat it if you didn't run a marathon - walks count!"
+  utter_ask_nome:
+  - text: "Para começar, preciso saber qual é o seu nome completo."
 
-  utter_ask_exercise:
-  - text: "what kink of exercise did you do?"
+  utter_ask_ra:
+  - text: "E o seu RA?"
 
-  utter_ask_sleep:
-  - text: "How much sleep did you get last night?"
-
-  utter_askt_diet:
-  - text: "did you stick to a healthy diet yesterday?"
-
-  utter_ask_stress:
-  - text: "What is your stress level right now?"
+  utter_ask_have_email:
+  - text: "Você já sabe o seu e-mail institucional?"
     buttons:
-      - title: "low"
-        payload: '/inform{"stress": "low"}'
-      - title: "medium"
-        payload: '/inform{"stress":"medium"}'
-      - title: "high"
-        payload: '/inform{"stress":"high"}'
+      - title: "Sim"
+        payload: '/inform{"have_email": "Sim"}'
+      - title: "Não"
+        payload: '/inform{"have_email":"Não"}'
 
-  utter_ask_goal:
-  - text: "Setting goals - even small ones - is a great way to focus your day. What do you want do accomplish today?"
+  utter_ask_email:
+  - text: "Poderia nos informar também o seu e-mail (preferencialmente o institucional (@sou.unifeb.edu.br))"
+
+  utter_ask_telefone:
+  - text: "Por ultimo, gostaríamos que nos informasse também o seu telefone."
+
+
 
   utter_slots_values:
-  - text: "You'se submitted the following answers: \n
-            - Exercised?: {confirm_exercise}\n
-            - Type of exercise: {exercise}\n
-            - Sleep: {sleep}\n
-            - Stuck to a healthy diet? {diet}\n
-            - Stress level: {stress}\n
-            - Goal: {goal}"
+  - text: "Ok, para confirmar, seus dados são: \n
+            - Nome: {nome}\n
+            - RA: {ra}\n
+            - Possui e-mail institucional?: {have_email}\n
+            - E-mail: {email}\n
+            - Telefone? {telefone}"
 
   utter_no_worries:
   - text: "No problem :)"
 
   utter_ask_continue:
-  - text: "Sorry, I don't quite understand. Do you want do continue?"
+  - text: "Desculpe, não entendi. Gostaria de continuar?"
 
 forms: 
-  - health_form
+  - aluno_form
 
 
 session_config:
