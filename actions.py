@@ -5,13 +5,11 @@ from requests.api import head
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from dotenv import load_dotenv
+
 
 import requests
 import json
-import os
 
-load_dotenv()
 
 airtable_api_key="keyK64wVMeF2p7Hfj"
 base_id="appgUMCqIucHb2cEK"
@@ -48,7 +46,6 @@ def create_health_log(confirm_exercise, exercise, sleep, diet, stress, goal):
     return response
     print(response.status_code)
 
-    }
 
 class HealthForm(FormAction):
 
