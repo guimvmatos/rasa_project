@@ -12,24 +12,25 @@ intents:
   - thankyou
   - out_of_scope
 
-  entities:
+entities:
   - exercise
   - sleep
   - stress
 
-  slots:
-    confirm_exercise:
-      type: unfeaturized
-    exercise: 
-      type: unfeaturized
-    sleep:
-      type: unfeaturized
-    diet:
-      type: unfeaturized
-    stress:
-      type: unfeaturized
-    goal:
-      type: unfeaturized
+slots:
+  confirm_exercise:
+    type: unfeaturized
+  exercise:
+    type: unfeaturized
+  sleep:
+    type: unfeaturized
+  diet:
+    type: unfeaturized
+  stress:
+    type: unfeaturized
+  goal:
+    type: unfeaturized
+
 responses:
 
   utter_goodbye:
@@ -84,7 +85,7 @@ responses:
   utter_no_worries:
   - text: "No problem :)"
 
-  utter_ast_continue:
+  utter_ask_continue:
   - text: "Sorry, I don't quite understand. Do you want do continue?"
 
 forms: 

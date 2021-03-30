@@ -51,7 +51,7 @@
 
 ## survey continue
 * greet
-    - utter_greet
+    - utter_introduce_myself
 * affirm
     - health_form
     - form{"name": "health_form"}
