@@ -1,20 +1,23 @@
 from typing import Any, Text, Dict, List, Union
 
-from requests.exceptions import RequestException
-from requests.models import Response
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
 import requests
 import json
-import os
+
+'''
 airtable_api_key="keyK64wVMeF2p7Hfj"
-base_id="appioQOpy9VguaEQq"
+base_id="appgUMCqIucHb2cEK"
+table_name="Table%201"
+'''
+airtable_api_key="keyK64wVMeF2p7Hfj"
+base_id="appTRe5qOsvMrUaYE"
 table_name="Table%201"
 
-def log_atendimento(nome, ra, have_email, email, telefone):
+
+def log_atendimento(nome, ra, email, telefone):
     request_url=f"https://api.airtable.com/v0/{base_id}/{table_name}"
 
     headers = {
@@ -25,9 +28,8 @@ def log_atendimento(nome, ra, have_email, email, telefone):
 
     data = {
         "fields": {
-            "ra": ra,
             "nome": nome,
-            "have_email": have_email,
+            "ra": ra,
             "email": email,
             "telefone": telefone,
         }
@@ -43,7 +45,7 @@ def log_atendimento(nome, ra, have_email, email, telefone):
     return response
     print(response.status_code)
 
-class HealthForm(FormAction):
+class AlunoForm(FormAction):
 
     def name(self):
         return "aluno_form"
@@ -87,14 +89,12 @@ class HealthForm(FormAction):
 
         nome = tracker.get_slot("nome"),
         ra = tracker.get_slot("ra"),
-        have_email = tracker.get_slot("have_email"),
         email = tracker.get_slot("email"),
         telefone = tracker.get_slot("telefone")
 
         response = log_atendimento(
             nome=nome,
             ra=ra,
-            have_email=have_email,
             email=email,
             telefone=telefone
         )
