@@ -1,7 +1,3 @@
-## greet
-* greet
-  - utter_introduce_myself
-
 ## say goodbye
 * goodbye
   - utter_goodbye
@@ -10,17 +6,9 @@
 * bot_challenge
   - utter_iamabot
 
-## pedido de boleto
-* boleto
-  - utter_boleto
-
-## pedido de diploma
-* diploma
-  - utter_diploma
-
 ## survey happy path
 * greet
-  - utter_introduce_myself
+    - utter_greet
 * affirm
     - health_form
     - form{"name": "health_form"}
@@ -30,15 +18,9 @@
     - utter_no_worries
     - utter_goodbye
 
-## no survey
-* greet
-    - utter_introduce_myself
-* deny
-    - utter_goodbye
-
 ## survey stop
 * greet
-    - utter_introduce_myself
+    - utter_greet
 * affirm
     - health_form
     - form{"name": "health_form"}
@@ -51,7 +33,7 @@
 
 ## survey continue
 * greet
-    - utter_introduce_myself
+    - utter_greet
 * affirm
     - health_form
     - form{"name": "health_form"}
@@ -61,3 +43,33 @@
     - health_form
     - form{"name": null}
     - utter_slots_values
+
+## no survey
+* greet
+    - utter_greet
+* deny
+    - utter_goodbye
+
+## ask health questions form
+* greet
+    - utter_greet
+* affirm
+    - health_form
+    - form{"name": "health_form"}
+* ask_exercise
+    - utter_exercise_info
+    - health_form
+    - form{"name": null}
+    - utter_goodbye
+
+## ask diet questions
+* ask_eat_healthy
+    - utter_diet_info
+
+## ask stress questions
+* ask_lower_stress
+    - utter_stress_info
+
+## ask exercise
+* ask_exercise
+    - utter_exercise_info

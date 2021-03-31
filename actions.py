@@ -1,11 +1,10 @@
+
 from typing import Any, Text, Dict, List, Union
 
-from requests.api import head
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-
 
 import requests
 import json
@@ -19,39 +18,36 @@ def create_health_log(confirm_exercise, exercise, sleep, diet, stress, goal):
     request_url=f"https://api.airtable.com/v0/{base_id}/{table_name}"
 
     headers = {
-        "Content-Type": "apllication/json",
+        "Content-Type": "application/json",
         "Accept": "application/json",
-        "Autorization": f"Bearer {airtable_api_key}"
-    }
-
+        "Authorization": f"Bearer {airtable_api_key}",
+    }  
     data = {
-        "fields":{
-            "Exercise?": confirm_exercise,
+        "fields": {
+            "Exercised?": confirm_exercise,
             "Type of exercise": exercise,
             "Amount of sleep": sleep,
             "Stress": stress,
             "Diet": diet,
-            "Goal": goal
+            "Goal": goal,
         }
     }
-
     try:
         response = requests.post(
-            request_url, header=headers, data=json.dumps(data)
+            request_url, headers=headers, data=json.dumps(data)
         )
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         raise SystemExit(err)
-
+    
     return response
     print(response.status_code)
-
 
 class HealthForm(FormAction):
 
     def name(self):
         return "health_form"
-    
+
     @staticmethod
     def required_slots(tracker):
 
@@ -61,9 +57,14 @@ class HealthForm(FormAction):
         else:
             return ["confirm_exercise", "sleep",
              "diet", "stress", "goal"]
-    
 
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
         return {
             "confirm_exercise": [
                 self.from_intent(intent="affirm", value=True),
@@ -91,14 +92,21 @@ class HealthForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        response = create_health_log(
-            tracker.get_slot("confirm_exercise"),
-            tracker.get_slot("exercise"),
-            tracker.get_slot("sleep"),
-            tracker.get_slot("diet"),
-            tracker.get_slot("stress"),
-            tracker.get_slot("goal")
-        )
+        confirm_exercise = tracker.get_slot("confirm_exercise")
+        exercise = tracker.get_slot("exercise")
+        sleep = tracker.get_slot("sleep")
+        stress = tracker.get_slot("stress")
+        diet = tracker.get_slot("diet")
+        goal = tracker.get_slot("goal")
 
-        dispatcher.utter_message("Thanks, suas respostas foram salvas")
+        response = create_health_log(
+                confirm_exercise=confirm_exercise,
+                exercise=exercise,
+                sleep=sleep,
+                stress=stress,
+                diet=diet,
+                goal=goal
+            )
+
+        dispatcher.utter_message("Thanks, your answers have been recorded!")
         return []

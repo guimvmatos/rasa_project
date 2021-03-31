@@ -4,26 +4,16 @@
 - hi
 - good morning
 - good evening
+- good night
+- good afternoon
 - hey there
-- oi
-- olá
-- bom dia
-- boa tarde
-- boa noite
-- eae
-- e aí
+- Hi
 
 ## intent:goodbye
 - bye
 - goodbye
 - see you around
 - see you later
-- tchau
-- xau
-- até mais
-- até logo
-- até a próxima
-- adeus
 
 ## intent:affirm
 - yes
@@ -31,86 +21,45 @@
 - of course
 - that sounds good
 - correct
-- sim
-- de fato
-- claro
-- correto
-- pode ser
-- certamente
-- sem dúvida
-- com certeza
+- sure
+- ok
+- why not
+- ok great
+- yes I did
+- yeah, great
+- pretty good
+- fine
+- You bet
+- I sure did
+- more or less
 
 ## intent:deny
 - no
 - never
 - I don't think so
-- don't like that
 - no way
 - not really
-- não
-- nunca
-- acho que não
-- de jeito nenhum
-- infelizmente não
+- none
+- absolutely not
+- no thanks
+- didn't do any
+- no I didn't
+- could have been better
+- not great
+- nope
 
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-- bem
-- bom
-- ótimo
-- perfeito
-- estou bem
-- estou ótimo
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
-- triste
-- mal
-- terrível
-- não muito bem
-- estou mal
-- não estou legal
+## intent:thankyou
+- okay great thanks
+- thank you
+- sure thanks
+- thanks bye
+- thanks
 
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
-- você é o bot?
-- você é um humano?
-- estou falando com um bot?
-- estou falando com um humano?
-- voce é uma pessoa?
-- voce é um bot?
-- voce é de verdade?
-
-## intent:boleto
-- pagar a faculdade
-- pagar o boleto
-- boleto
-- pagar
-
-## intent:diploma
-- diploma
-- certificado de conclusão
-- como posso pegar o meu diploma?
-- meu diploma esta pronto?
 
 ## intent:inform
 - a full [8 hours](sleep)
@@ -118,7 +67,7 @@
 - about [six hours](sleep)
 - [low](stress)
 - [medium](stress)
-- [high](stress) stress right now
+- [high](stress)
 - Yes, I went for a [run](exercise)
 - uh huh an hour of [yoga](exercise)
 - yep, I went for a [hike](exercise)
@@ -171,8 +120,24 @@
 - I want to do something else
 - I changed my mind
 
-## intent:thankyou
-- okay great thanks
-- thank you
-- sure thanks
-- thanks bye
+## intent:ask_lower_stress
+- What do I do if I'm too stressed?
+- How can I lower my stress level?
+- What are some good ways to lower stress?
+- What are good ways to relax?
+- What are some things I can do lower my stress?
+
+## intent:ask_eat_healthy
+- What's considered a good diet?
+- What's considered healthy food?
+- How do I follow a healthy diet?
+- What's an example of a healthy diet?
+- How do I eat healthy?
+
+## intent:ask_exercise
+- What's a good amount of exercise for someone in their thirties?
+- How much exercise should I be getting?
+- How much exercise is recommended?
+- Is walking once a day enough exercise?
+- How much exercise should I do every day?
+- How many times per week should I go to the gym?
