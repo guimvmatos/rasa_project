@@ -1,6 +1,9 @@
+flow:
+https://drive.google.com/file/d/1eHWPlY81Cn3tXbIv5IIo9m1iHz6uqM7I/view?usp=sharing
+
 ###intenção do usuário:
 
-* Realizar estudo de intenção de usuário em atendimento com NAEM + NIT 
+* Realizar estudo de intenção de usuário em atendimento com NAEM + NIT (incluir secretaria e financeiro?)
 
 boleto
 diploma
@@ -14,6 +17,10 @@ portal academico (o que é o portal academico. suporte com acesso, senha, o que 
 
 classroom/sala de aula virtual/aula/meet (suporte com aulas, link, não consigo entrar, não sei qual é o link, não estou na sala, o que mais?)
 
+secretaria (quais documentos preciso para fazer matricula?, queria trancar minha matricula, calendário de aulas, o que mais?)
+
+financiero (download do boleto, onde pagar o boleto, quitação de dívidas, negociação, o que mais?)
+
 ###Dominio do bot:
 
 ambiente educacional
@@ -24,11 +31,10 @@ ambiente educacional
 
 
 Sugestões interessantes para o futuro:
-- ajudar alunos com outros tipos de problemas (depressão -> pro aluno)
 - previsão do tempo (pensar em algo para criar a vontade ou estimular a curiosidade do aluno)
 - cotação do dolar (pode jogar para um artigo próprio na rede social explicando ou para o curso de contabilidade)
 - teste vocacional (apresentar os cursos, jogar para o site da unifeb, talvez algum contato)
-
+- ajudar alunos com outros tipos de problemas (depressão -> pro aluno) (temos parceiros comerciais ou algo do tipo? exemplo, aluno quer comprar materias de contrução, vamos supor que temos como parceiro do curso de engenharia civil uma determinada loja. Podemos fazer esse merchan? se sim, abre-se um slot a se pensar)
 
 
 ###Modelo
@@ -59,7 +65,7 @@ RASA API
 O mais importante a ser levado em consideração aqui é se:
 -> Haverá integração entre o RASA e o Rocket.chat (omnichannel)? (Esta integração somente é necessária se o bot for repassar atendimento para dentro do rocket (atendimento naem, secretaria, financeiro, etc)
 
--> as possibilidades aqui são:
+-> as possibilidades aqui são: 
 1 - não ter integração, mantem-se os dois botões na pagina (bot mostra o botão em caso de não solução)
 2 - sistema integrado, mas mantem-se os dois botões (bot repassa ou usuário pula o bot)
 3 - sistema integrado, retira o botão atual (unico caminho para omnichannel é pelo bot)
@@ -75,4 +81,8 @@ R:
 -> Quais as desvantagens de manter apenas o bot?
 R:
 
-By: Guilherme Matos
+to fix:
+1 - A entidade telefone capta o numero de RA. corrigir! Descobrir maneira de colocar um padrão (xx) xxxxx-xxxxx
+2 - Quando o aluno já forneceu os dados e passou pelo ciclo de atendimento, se ele fornece a intenção greet, é perguntado novamente se ele deseja fornecer os dados. Criar lógica (if form is ok, then no to ask again)
+3 - Pensar em uma maneira de confirmar os dados para correção (se o aluno errou no ra, ele poder corrigir)
+4 - após cada ação (boleto, diploma), continuar com um texto tipo: Isto foi útil? ou "posso ajudar em algo mais?"
