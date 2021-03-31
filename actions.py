@@ -7,7 +7,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 
-class HealthForm(FormAction):
+class AlunoForm(FormAction):
 
     def name(self):
         return "aluno_form"
