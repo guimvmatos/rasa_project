@@ -1,4 +1,4 @@
-from typing import Any, Text, Dict, List, Union
+'''from typing import Any, Text, Dict, List, Union
 
 from requests.exceptions import RequestException
 from requests.models import Response
@@ -51,3 +51,4 @@ class AlunoForm(FormAction):
 
         dispatcher.utter_message("Obrigado pelas informações")
         return []
+'''

@@ -1,98 +1,22 @@
 ## intent:greet
-- hey
-- hello
-- hi
-- good morning
-- good evening
-- hey there
 - oi
+- Oi.
+- Ola
 - olá
 - bom dia
+- Bom dia.
 - boa tarde
+- boa tarde.
 - boa noite
 - eae
 - e aí
-
-## intent:goodbye
-- bye
-- goodbye
-- see you around
-- see you later
-- tchau
-- xau
-- até mais
-- até logo
-- até a próxima
-- adeus
-
-## intent:affirm
-- yes
-- indeed
-- of course
-- that sounds good
-- correct
-- sim
-- de fato
-- claro
-- correto
-- pode ser
-- certamente
-- sem dúvida
-- com certeza
-
-## intent:deny
-- no
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
-- não
-- nunca
-- acho que não
-- de jeito nenhum
-- infelizmente não
-
-## intent:mood_great
-- perfect
-- very good
-- great
-- amazing
-- wonderful
-- I am feeling very good
-- I am great
-- I'm good
-- bem
-- bom
-- ótimo
-- perfeito
-- estou bem
-- estou ótimo
-
-## intent:mood_unhappy
-- sad
-- very sad
-- unhappy
-- bad
-- very bad
-- awful
-- terrible
-- not very good
-- extremely sad
-- so sad
-- triste
-- mal
-- terrível
-- não muito bem
-- estou mal
-- não estou legal
 
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
-- você é o bot?
+- você é um bot?
 - você é um humano?
 - estou falando com um bot?
 - estou falando com um humano?
@@ -101,34 +25,31 @@
 - voce é de verdade?
 
 ## intent:boleto
-- pagar a faculdade
-- pagar o boleto
 - boleto
+- gostaria de pegar o boleto para realizar o pagamento da faculdade
+- onde posso baixar o boleto para pagar?
+- como consigo o boleto da faculdade?
+- pagar o boleto
 - pagar
 
-## intent:diploma
-- diploma
-- certificado de conclusão
-- como posso pegar o meu diploma?
-- meu diploma esta pronto?
+## intent:declaracao_matricula
+- declaração de matricula
+- Realizei a matricula e gostaria da declaração
+- Onde posso baixar a declaração de matricula?
+- Atestado de matricula
+- gostaria do atestado de matricula
+- quero baixar o atestado de matricula
+- como posso pegar o atestado de matricula?
+- como baixar o atestado ou declaração que estou matriculado?
 
-## intent:inform
-- meu nome é [guilherme mendes](nome)
-- nome: [patricia angelucci](nome)
-- [Leonardo Ventura Alves](nome)
-- Meu ra é: [512203](ra)
-- RA: [530230](ra)
-- [528957](ra)
-- meu e-mail é: [guilherme.matos@sou.unifeb.edu.br](email)
-- email: [cleber.dti@sou.unifeb.edu.br](email)
-- [unifeb@sou.unifeb.edu.br](email)
-- [guimvmatos@outlook.com](email)
-- [***@gmail.com](email)
-- meu telefone é: [17988139323](telefone)
-- telefone: [988002233](telefone)
-- celular: [923423433](telefone)
-- celular: [17988234567](telefone)
-- [sim] já possuo e-mail institucional(have_email)
+## intent:negativa
+- não
+- não, obrigado
+- já resolveu
+- não, era só isso
+- era só isto
+- mais nada
+
 
 ## intent:out_of_scope
 - Porque precisa do meu nome?
@@ -159,14 +80,3 @@
 - nevermind
 - I want to do something else
 - I changed my mind
-
-## intent:thankyou
-- okay great thanks
-- thank you
-- sure thanks
-- thanks bye
-- obrigado
-- muito obrigado
-- agradecido
-- agradeço
-- ok, obrigado

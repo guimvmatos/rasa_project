@@ -1,97 +1,36 @@
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
   - boleto
-  - diploma
-  - inform
-  - thankyou
+  - declaracao_matricula
   - out_of_scope
-
-entities:
-  - nome
-  - ra
-  - have_email
-  - email
-  - telefone
-
-slots:
-  nome:
-    type: unfeaturized
-  ra:
-    type: unfeaturized
-  have_email:
-    type: unfeaturized
-  email:
-    type: unfeaturized
-  telefone:
-    type: unfeaturized
+  - negativa
 
 responses:
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Estarei à disposição. Qualquer coisa, é só chamar."
 
   utter_iamabot:
-  - text: "Batman, Gothan precisa de ajuda!"
+  - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
   utter_introduce_myself:
-  - text: "Olá, eu sou Gothan, assistente virtual da UNIFEB. Para melhor atende-lo, gostaria que me informasse algumas informações, como seu nome, RA, e-mail e telefone. Podemos começar?"
+  - text: "Ola, sou o assistente virtual da UNIFEB. Como posso te ajudar? \n\n Obs: voce pode dizer algo como 'Boleto' ou 'Declaração de matricula'"
 
-  utter_limited_actions:
-  - text: "Sem seus dados talvez não consiga te ajudar da forma como gostaria. No entanto, vamos tentar. Em que posso te ajudar?"
-
-  utter_what_can_i_help:
-  - text: "Em que posso te ajudar?"
+  utter_what_more:
+  - text: "Posso te ajudar em algo mais?"
 
   utter_boleto:
-  - text: "Para realizar o pagamento do seu boleto realize o download dele em: http://savethesounds.info/. Você pode ver um vídeo tutorial de como realizar esta ação aqui: https://www.youtube.com/watch?v=OgO2U4quFDk. Caso deseja outras opções relacionadas à boleto, entre em contato com nosso setor financeiro"
+  - text: "Você pode realizar o download do seu boleto em: http://savethesounds.info/. \n\n Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=OgO2U4quFDk. \n\n Para saber mais, entre em contato com nosso setor financeiro"
 
-  utter_diploma:
-  - text: "Você pode realizar o download do seu diploma em: https://arkadia.xyz/. Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. Para saber mais, entre em contato com nossa secretaria academica"
+  utter_declaracao_matricula:
+  - text: "Você pode realizar o download da sua declaração em: https://arkadia.xyz/. \n\n Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. \n\n Para saber mais, entre em contato com nossa secretaria academica"
 
-  utter_ask_nome:
-  - text: "Para começar, preciso saber qual é o seu nome completo."
-
-  utter_ask_ra:
-  - text: "E o seu RA?"
-
-  utter_ask_have_email:
-  - text: "Você já sabe o seu e-mail institucional?"
-    buttons:
-      - title: "Sim"
-        payload: '/inform{"have_email": "Sim"}'
-      - title: "Não"
-        payload: '/inform{"have_email":"Não"}'
-
-  utter_ask_email:
-  - text: "Poderia nos informar também o seu e-mail (preferencialmente o institucional (@sou.unifeb.edu.br))"
-
-  utter_ask_telefone:
-  - text: "Por ultimo, gostaríamos que nos informasse também o seu telefone."
+  utter_out_of_scope:
+  - text: "Infelizmente não posso atender à esta solicitação. Vamos recomeçar..."
 
 
 
-  utter_slots_values:
-  - text: "Ok, para confirmar, seus dados são: \n
-            - Nome: {nome}\n
-            - RA: {ra}\n
-            - Possui e-mail institucional?: {have_email}\n
-            - E-mail: {email}\n
-            - Telefone? {telefone}"
-
-  utter_no_worries:
-  - text: "No problem :)"
-
-  utter_ask_continue:
-  - text: "Desculpe, não entendi. Gostaria de continuar?"
-
-forms: 
-  - aluno_form
 
 
 session_config:
