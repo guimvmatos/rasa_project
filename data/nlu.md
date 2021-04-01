@@ -128,14 +128,6 @@
 - telefone: [988002233](telefone)
 - celular: [923423433](telefone)
 - celular: [17988234567](telefone)
-- a full [8 hours](sleep)
-- only [four hours](sleep)
-- about [six hours](sleep)
-- [8 horas](sleep)
-- [4 horas](sleep)
-- [6 horas](sleep)
-- mais ou menos umas [7 horas](sleep)
-- só [3 horas](sleep)
 - [sim] já possuo e-mail institucional(have_email)
 
 ## intent:out_of_scope
