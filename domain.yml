@@ -11,6 +11,7 @@ intents:
   - inform
   - thankyou
   - out_of_scope
+  - get_started
 
 entities:
   - nome

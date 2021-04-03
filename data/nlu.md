@@ -13,6 +13,9 @@
 - eae
 - e aí
 
+## intent:get_started
+- get_started
+
 ## intent:goodbye
 - bye
 - goodbye

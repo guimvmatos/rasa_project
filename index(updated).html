@@ -16,8 +16,17 @@
 <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.5.0/lib/index.min.js"></script>
 // Or you can replace latest with a specific version
 <script>
+  window.onload = WebChat.open; //já abre a página com o chat aberto
   WebChat.default.init({
     selector: "#webchat",
+    initPayload: "/get_started", //inicia com intent 'get_started' -> usado para iniciar conversa
+    interval: 1000, // 1000 ms between each message
+    inputTextFieldHint: "Type a message...",
+    connectingText: "Waiting for server...",
+    hideWhenNotConnected: true,
+    fullScreenMode: false, //quando abre, já esta em fullscreen
+    showFullScreenButton: true,
+    profileAvatar: "teste.jpg", //imagem que aparece ao lado do title/subtitle e dentro do chat, ao lados dos dialogos
     customData: {"language": "en"},
     /*socketUrl: "http://0d23d7e5ce90.ngrok.io",*/
     socketUrl: "http://localhost:5005",
@@ -25,7 +34,18 @@
     socketPath: "/socket.io/",
     title: "UNIFEB",
     subtitle: "GOTHAN",
+    embedded: false,
+    openLauncherImage: 'teste.jpg', //imagem para abrir chat
+    closeLauncherImage: 'teste.jpg', //imagem para fechar chat (não funcionou neste, provavelmente por causa do script do próprio rasa.)
+    params: {
+      images: {
+        dims: {
+          width: 300,
+          height: 200,
+        }
+      },
     params: {"storage": "session"}
+    },
   })
 </script>
 

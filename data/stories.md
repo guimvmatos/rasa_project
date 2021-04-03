@@ -18,6 +18,10 @@
 * diploma
   - utter_diploma
 
+## iniciando_chat
+* get_started
+  - utter_introduce_myself
+
 ## survey happy path
 * greet
   - utter_introduce_myself
