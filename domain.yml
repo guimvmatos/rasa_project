@@ -15,7 +15,7 @@ responses:
   - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
   utter_introduce_myself:
-  - text: "Ola, sou o assistente virtual da UNIFEB. Como posso te ajudar? \n\n Obs: voce pode dizer algo como 'Boleto' ou 'Declaração de matricula'"
+  - text: "Olá, eu sou <NAME>, a/o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA e CPF, por gentileza? Como posso te ajudar? \n\n Obs: voce pode dizer algo como 'Boleto' ou 'Declaração de matricula'"
 
   utter_what_more:
   - text: "Posso te ajudar em algo mais?"
