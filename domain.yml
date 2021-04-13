@@ -4,9 +4,33 @@ intents:
   - boleto
   - declaracao_matricula
   - out_of_scope
+  - affirmativa
   - negativa
+  - get_started
+
+entities:
+  - ra
+
+slots:
+  ra:
+    type: unfeaturied
+  nome:
+    type: unfeaturized
+  email:
+    type: unfeaturired
+
 
 responses:
+
+  offer_options: 
+  - text: "Te encontrei \n\n {nome} posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
+      buttons:
+      - title: "Boleto"
+        payload: '/<boleto>'
+      - title: "Declaração de matricula"
+        payload: '/<declaracao_matricula>'
+      - title: "Outros assuntos"
+        payload: '/outros_assuntos'
 
   utter_goodbye:
   - text: "Estarei à disposição. Qualquer coisa, é só chamar."
@@ -14,8 +38,8 @@ responses:
   utter_iamabot:
   - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
-  utter_introduce_myself:
-  - text: "Olá, eu sou <NAME>, a/o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA e CPF, por gentileza? Como posso te ajudar? \n\n Obs: voce pode dizer algo como 'Boleto' ou 'Declaração de matricula'"
+  utter_ask_ra:
+  - text: "Olá, eu sou <BOT_NAME>, a/o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
 
   utter_what_more:
   - text: "Posso te ajudar em algo mais?"

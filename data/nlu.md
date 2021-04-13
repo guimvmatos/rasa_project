@@ -1,3 +1,6 @@
+## intent:get_started
+- get_started
+
 ## intent:greet
 - oi
 - Oi.
@@ -42,6 +45,19 @@
 - como posso pegar o atestado de matricula?
 - como baixar o atestado ou declaração que estou matriculado?
 
+## intent:outros_assuntos
+- outros assuntos
+
+## intent:afirmativa
+- sim
+- de fato
+- claro
+- correto
+- pode ser
+- certamente
+- sem dúvida
+- com certeza
+
 ## intent:negativa
 - não
 - não, obrigado
@@ -49,6 +65,14 @@
 - não, era só isso
 - era só isto
 - mais nada
+## intent:ra
+- meu ra é [512203](ra)
+- meu ra é: [532591](ra)
+- ra: [534591](ra)
+- ra [533195](ra)
+- [510034](ra)
+- [529898](ra)
+- [531195](ra)
 
 
 ## intent:out_of_scope

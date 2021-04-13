@@ -1,4 +1,4 @@
-'''from typing import Any, Text, Dict, List, Union
+from typing import Any, Text, Dict, List, Union
 
 from requests.exceptions import RequestException
 from requests.models import Response
@@ -15,31 +15,15 @@ class AlunoForm(FormAction):
     @staticmethod
     def required_slots(tracker):
 
-        return ["nome", "ra", "have_email", "email","telefone"]
+        return ["ra"]
        
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
-            "nome": [
-                self.from_text(intent="inform"),
-                self.from_entity(entity="nome"),
-            ],
+
             "ra": [
-                self.from_text(intent="inform"),
+                self.from_text(intent="ra"),
                 self.from_entity(entity="ra"),
             ],
-            "have_email":[
-                self.from_entity(entity="have_email"),
-                self.from_intent(intent="affirm",value=True),
-                self.from_intent(intent="deny",value= False),
-            ],
-            "email": [
-                self.from_text(intent="inform"),
-                self.from_entity(entity="email"),
-            ],
-            "telefone": [
-                self.from_text(intent="inform"),
-                self.from_entity(entity="telefone"),
-            ]
         }
 
     def submit(
@@ -51,4 +35,3 @@ class AlunoForm(FormAction):
 
         dispatcher.utter_message("Obrigado pelas informações")
         return []
-'''

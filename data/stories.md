@@ -1,6 +1,10 @@
-## greet
-* greet
-  - utter_introduce_myself
+## iniciando_chat
+* get_started
+  - aluno_form
+  - form{"name": "aluno_form"}
+  - form{"name": null}
+  - offer_options
+
 
 ## bot challenge
 * bot_challenge
@@ -19,7 +23,7 @@
 ## out of scope
 * out_of_scope
   - utter_out_of_scope
-  - utter_introduce_myself
+  - offer_options
 
 ## negativo
 * negativa
