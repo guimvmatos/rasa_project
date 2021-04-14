@@ -13,22 +13,22 @@ entities:
 
 slots:
   ra:
-    type: unfeaturied
+    type: unfeaturized
   nome:
     type: unfeaturized
   email:
-    type: unfeaturired
+    type: unfeaturized
 
 
 responses:
 
   offer_options: 
   - text: "Te encontrei \n\n {nome} posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
-      buttons:
+    buttons:
       - title: "Boleto"
-        payload: '/<boleto>'
+        payload: '/boleto'
       - title: "Declaração de matricula"
-        payload: '/<declaracao_matricula>'
+        payload: '/declaracao_matricula'
       - title: "Outros assuntos"
         payload: '/outros_assuntos'
 
@@ -53,7 +53,8 @@ responses:
   utter_out_of_scope:
   - text: "Infelizmente não posso atender à esta solicitação. Vamos recomeçar..."
 
-
+forms: 
+  - aluno_form
 
 
 
