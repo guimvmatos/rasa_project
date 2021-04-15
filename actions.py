@@ -10,6 +10,7 @@ from requests.models import Response
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+from rasa_sdk.events import AllSlotsReset, SlotSet
 
 
 
@@ -21,7 +22,7 @@ class AlunoForm(FormAction):
     @staticmethod
     def required_slots(tracker):
 
-        return ["ra", "nome"]
+        return ["ra"]
        
     def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
@@ -31,6 +32,7 @@ class AlunoForm(FormAction):
                 self.from_entity(entity="ra"),
             ],
         }
+        
 
 
     def buscarDadosAluno(self,ra_aluno):
@@ -50,9 +52,11 @@ class AlunoForm(FormAction):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
+        {"nome": nomef}
+        {"email": emailf}
 
-        return raf,nomef,emailf
-    
+        #return raf,nomef,emailf
+        return [SlotSet("nome": nomef, SlotSet("email":emailf)]
 
     def submit(
         self,
@@ -61,7 +65,7 @@ class AlunoForm(FormAction):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        data=self.buscarDadosAluno(512203)
         
-        dispatcher.utter_message("Obrigado pelas informações %s" % data[1])
+        
+        dispatcher.utter_message("Obrigado pelas informações")
         return []
