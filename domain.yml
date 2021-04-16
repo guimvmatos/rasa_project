@@ -8,13 +8,10 @@ intents:
   - negativa
   - get_started
   
-actions: 
-  - dados_aluno
 
 entities:
   - ra
-  - nome
-  - email
+
 
 slots:
   ra:
@@ -24,7 +21,7 @@ slots:
 responses:
 
   offer_options: 
-  - text: "Te encontrei \n\n {nome} posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
+  - text: "Te encontrei \n\n Olá nome do aluno, \n posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
     buttons:
       - title: "Boleto"
         payload: "/boleto"
