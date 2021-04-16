@@ -1,26 +1,25 @@
 intents:
+  - get_started
   - greet
   - bot_challenge
   - boleto
   - declaracao_matricula
-  - out_of_scope
+  - outros_assuntos
   - affirmativa
   - negativa
-  - get_started
+  - ra
+  - out_of_scope
   
-
 entities:
   - ra
-
 
 slots:
   ra:
     type: unfeaturized
 
-
 responses:
 
-  offer_options: 
+  utter_offer_options: 
   - text: "Te encontrei \n\n Olá nome do aluno, \n posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
     buttons:
       - title: "Boleto"

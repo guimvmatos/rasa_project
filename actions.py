@@ -43,6 +43,7 @@ class AlunoForm(FormAction):
         dispatcher.utter_message("Obrigado pelas informações")
         return []
 
+'''
 class dadosAluno(action):
     def name(self):
         return "dados_aluno"
@@ -73,3 +74,5 @@ class dadosAluno(action):
         emailf=reply['email']
 
         return {"nome": nomef, "email":emailf}
+        
+'''

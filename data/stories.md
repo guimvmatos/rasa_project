@@ -3,7 +3,7 @@
   - aluno_form
   - form{"name": "aluno_form"}
   - form{"name": null}
-  - offer_options
+  - utter_offer_options
 
 
 ## bot challenge
@@ -23,7 +23,7 @@
 ## out of scope
 * out_of_scope
   - utter_out_of_scope
-  - offer_options
+  - utter_offer_options
 
 ## negativo
 * negativa

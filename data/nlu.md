@@ -65,6 +65,7 @@
 - não, era só isso
 - era só isto
 - mais nada
+
 ## intent:ra
 - meu ra é [512203](ra)
 - meu ra é: [532591](ra)
@@ -73,7 +74,6 @@
 - [510034](ra)
 - [529898](ra)
 - [531195](ra)
-
 
 ## intent:out_of_scope
 - Porque precisa do meu nome?
