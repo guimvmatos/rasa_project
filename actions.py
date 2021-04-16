@@ -8,7 +8,7 @@ from requests.structures import CaseInsensitiveDict
 from requests.models import Response
 
 from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.executor import CollectingDispatcher, Action
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import AllSlotsReset, SlotSet
 
@@ -33,15 +33,34 @@ class AlunoForm(FormAction):
             ],
         }
         
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        
+        dispatcher.utter_message("Obrigado pelas informações")
+        return []
 
+class dadosAluno(action):
+    def name(self):
+        return "dados_aluno"
 
-    def buscarDadosAluno(self,ra_aluno):
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+
         request_url=f"http://api.feb.br/RM_Controller_Central/getAluno"
     
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/x-www-form-urlencoded"
         headers["Accept"] = "application/json"
         
+        ra_aluno = tracker.get_slot("ra")
         data = "ra=%s" % (ra_aluno)
         response = requests.post(
                 request_url, headers=headers, data=data
@@ -52,20 +71,5 @@ class AlunoForm(FormAction):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
-        {"nome": nomef}
-        {"email": emailf}
 
-        #return raf,nomef,emailf
-        return [SlotSet("nome": nomef, SlotSet("email":emailf)]
-
-    def submit(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
-
-        
-        
-        dispatcher.utter_message("Obrigado pelas informações")
-        return []
+        return {"nome": nomef, "email":emailf}
