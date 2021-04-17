@@ -43,10 +43,10 @@ class AlunoForm(FormAction):
         dispatcher.utter_message("Obrigado pelas informações")
         return []
 
-'''
-class dadosAluno(action):
+
+class dadosAluno(Action):
     def name(self):
-        return "dados_aluno"
+        return "dadosAluno"
 
     def run(
         self,
@@ -73,6 +73,4 @@ class dadosAluno(action):
         celularf=reply['celular']
         emailf=reply['email']
 
-        return {"nome": nomef, "email":emailf}
-        
-'''
+        return [SlotSet("nome", nomef)]
