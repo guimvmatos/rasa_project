@@ -35,6 +35,10 @@
 - pagar o boleto
 - pagar
 
+## intent:relacionamento
+- gostaria de falar na central de relacionamento
+- central de relacionamento
+
 ## intent:declaracao_matricula
 - declaração de matricula
 - Realizei a matricula e gostaria da declaração
