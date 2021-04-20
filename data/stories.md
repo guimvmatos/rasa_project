@@ -31,9 +31,18 @@
 * relacionamento
   - utter_relacionamento
 
-## pedido declaracao de matricula
+## pedido declaracao de matricula aluno
 * declaracao_matricula
   - utter_declaracao_matricula
+* aluno
+  - utter_declaracao_matricula_aluno
+  - utter_what_more
+
+## pedido declaracao de matricula ex-aluno
+* declaracao_matricula
+  - utter_declaracao_matricula
+* exaluno
+  - utter_declaracao_matricula_exaluno
   - utter_what_more
 
 ## out of scope

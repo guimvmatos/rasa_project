@@ -1,6 +1,12 @@
 ## intent:get_started
 - get_started
 
+## intent:aluno
+- Aluno
+
+## intent:exaluno
+- Ex-aluno
+
 ## intent:greet
 - oi
 - Oi.

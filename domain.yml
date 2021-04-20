@@ -10,6 +10,8 @@ intents:
   - negativa
   - ra
   - out_of_scope
+  - aluno
+  - exaluno
   
 entities:
   - ra
@@ -61,7 +63,18 @@ responses:
         payload: "/relacionamento"
 
   utter_declaracao_matricula:
-  - text: "Você pode realizar o download da sua declaração em: https://arkadia.xyz/. \n\n Para orientações acerca de como realizar este procedimento, verifique nosso vídeo tutorial: https://www.youtube.com/watch?v=Mwx3RvDWvDM. \n\n Para saber mais, entre em contato com nossa secretaria academica"
+  - text: "Para ajuda-lo, preciso saber se é aluno ou ex-aluno"
+    buttons:
+      - title: "Aluno"
+        payload: "/aluno"
+      - title: "Ex-aluno"
+        payload: "/exaluno"
+
+  utter_declaracao_matricula_aluno:
+  - text: "disponibilizar passo a passo: como solicitar documento via portal do aluno"
+
+  utter_declaracao_matricula_exaluno:
+  - text: "orientação para solicitar documento via e-mail"
 
   utter_relacionamento:
   - text: "Tudo bem então, adorei conversar com você. \n\n Um momento que irei lhe transferir ao atendente de nossa CENTRAL DE RELACIONAMENTO. \n\n Após implementação, encaminha o aluno para atendimento humano."
