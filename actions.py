@@ -6,9 +6,11 @@ import json
 import smtplib
 
 from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
+from email import *
 
 from requests.exceptions import RequestException
 from requests.structures import CaseInsensitiveDict
@@ -93,30 +95,80 @@ class enviarBoleto(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict]:
 
-        # conexão com os servidores do google
+        # conexão com os servidores da MS
         smtp_ssl_host = 'smtp.office365.com'
         smtp_ssl_port = 587
         
         # username ou email para logar no servidor
-        password = 'z4bbix@admin'
-
-        sender = 'zabbix@feb.br'
+        #password = 'z4bbix@admin'
+        #sender = 'zabbix@feb.br'
         #receiver = ['guimvmatos@gmail.com','leonardo.dti@feb.br'] para enviar para mais de um destinatário
         #receiver = 'guimvmatos@gmail.com' para enviar para um destinatário
+
+        password = 'Unifeb@2021'
+        sender = 'relacionamento@feb.br'
         receiver = tracker.get_slot("email")
+        nome = tracker.get_slot("nome")
+        
+        body1 = "Olá %s, \n\n Conforme solicitado, segue em anexo seu boleto para pagamento. \n\n" % (nome)
 
+        body2="""
+        <html>
+        <head></head>
+            <body>
+                <p>Caso as informa&ccedil;&otilde;es estejam erradas, voc&ecirc; pode realizar o contato on-line <a href="https://unifeb.rocket.chat/livechat?mode=popout">clicando aqui</a>. Voc&ecirc; ser&aacute; redirecionado para nosso suporte via CHAT. Voc&ecirc; pode come&ccedil;ar se identificando e dizendo qual &eacute; o seu problema. Nossa equipe estar&aacute; &agrave; disposi&ccedil;&atilde;o para lhe ajudar.</p>
 
-        body = '''Prezado aluno(a), 
-        Conforme solicitado, segue em anexo seu boleto'''
+                <p><a href="https://unifeb.rocket.chat/livechat?mode=popout" target="_blank"><img src="images/livechat.jpg"/></a></p>
+                
+                <p>Caso o link n&atilde;o funcione, acesse <a href="www.unifeb.edu.br">www.unifeb.edu.br</a> e procure pelo &iacute;cone de chat no canto inferior direito da tela. Ao clicar no &iacute;cone, o chat j&aacute; estar&aacute; dispon&iacute;vel para voc&ecirc;.</p>
+                
+                <p>Nosso suporte est&aacute; dispon&iacute;vel de segunda a sexta feira, das 9h &agrave;s 19h, e s&aacute;bado das 9h &agrave;s 11h.</p>
+            </body>
+        </html>
+        """
+        #primeira parte: colocando o body (plain+html)
+        msg_alternative = MIMEMultipart('alternative')
+        msg_alternative.attach(MIMEText(body1,'plain'))
+        msg_alternative.attach(MIMEText(body2, 'html'))
 
+        #segunda parte: setando o anexo .pdf
+        pdfname='pdf_sample_2.pdf'
+        binarypdf = open(pdfname,'rb')
+        #attachment = email.mime.application.MIMEApplication(binarypdf.read(),_subtype="pdf")
+        attachment = MIMEApplication(binarypdf.read(),_subtype="pdf")
+        binarypdf.close()
+        attachment.add_header('Content-Disposition', 'attachment', filename=pdfname)
+
+        #terceira parte: criando modo mixo
+        msg_mixed = MIMEMultipart('mixed')
+        msg_mixed.attach(msg_alternative)
+        msg_mixed.attach(attachment)
+        msg_mixed['from'] = sender
+        #msg_mixed['to'] = ', '.join(receiver) para enviar para mais de um destinatário
+        msg_mixed['to'] = receiver
+        msg_mixed['subject'] = 'Boleto UNIFEB'
+
+        #quarta parte: conectando e enviando
+        session = smtplib.SMTP(smtp_ssl_host, smtp_ssl_port)
+        session.ehlo()
+        #session.starttls(context=context)
+        session.starttls()
+        session.login(sender, password)
+        session.sendmail(sender, receiver, msg_mixed.as_string())
+        session.quit()
+
+        return []
+
+'''
         #message = MIMEText('Hello World')
-        message = MIMEMultipart()
+        message = MIMEMultipart('relative')
         message['from'] = sender
         #message['to'] = ', '.join(receiver) para enviar para mais de um destinatário
         message['to'] = receiver
-        message['subject'] = 'python script test'
+        message['subject'] = 'Boleto UNIFEB'
         
-        message.attach(MIMEText(body,'plain'))
+        message.attach(MIMEText(body1,'plain'))
+        message.attach(MIMEText(body2,'html'))
 
         pdfname='pdf_sample_2.pdf'
 
@@ -131,6 +183,7 @@ class enviarBoleto(Action):
 
         # add header with pdf name
         payload.add_header('Content-Decomposition', 'attachment', filename=pdfname)
+        payload.add_header('Content-decomposition', 'attachment', filename="boleto.pdf")
         message.attach(payload)
 
         #context = ssl.SSLContext(ssl.PROTOCOL_TLS)
@@ -141,5 +194,5 @@ class enviarBoleto(Action):
         session.login(sender, password)
         session.sendmail(sender, receiver, message.as_string())
         session.quit()
-
-        return []
+'''
+        
