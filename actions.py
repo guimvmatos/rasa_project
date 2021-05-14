@@ -84,20 +84,6 @@ class dadosAluno(Action):
 
         return [SlotSet("nome", nomef), SlotSet("email",emailf)]
 
-class handoverTo(Action):
-    def name(self):
-            return "handoverTo"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[Dict]:
-
-        request_url=f"https://unifeb.rocket.chat/api/apps/public/646b8e7d-f1e1-419e-9478-10d0f5bc74d9/incoming"
-
-        
 
 class enviarBoleto(Action):
     def name(self):
