@@ -81,8 +81,9 @@ class dadosAluno(Action):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
+        sid=getContext(sessionId)
 
-        return [SlotSet("nome", nomef), SlotSet("email",emailf)]
+        return [SlotSet("nome", sid), SlotSet("email",emailf)]
 
 
 class enviarBoleto(Action):
