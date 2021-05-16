@@ -81,7 +81,7 @@ class dadosAluno(Action):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
-        sid=getContext(sessionId)
+        sid=tracker.sender_id
 
         return [SlotSet("nome", sid), SlotSet("email",emailf)]
 

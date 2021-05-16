@@ -12,7 +12,14 @@ intents:
   - out_of_scope
   - aluno
   - exaluno
-  
+  - smartphone
+  - computer
+  - myemail
+  - fluigpassword
+  - portalpassword
+  - fulltutorial
+  - detailtutorial
+
 entities:
   - ra
   - nome
@@ -46,7 +53,75 @@ responses:
   - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
   utter_ask_ra:
-  - text: "Olá, eu sou <BOT_NAME>, a/o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
+  - text: "Olá, eu sou o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
+
+  utter_device:
+  - text: "{nome} Para melhor ajudá-lo, por favor informe se está usando celular ou computador."
+    buttons:
+      - title: "Celular"
+        payload: "/smartphone"
+      - title: "Computador"
+        payload: "/computer"
+
+  utter_smartphone_advice:
+  - text: "Aviso de uso com smartphone. Deseja continuar mesmo assim?"
+    buttons:
+      - title: "Sim, assumo os riscos"
+        payload: "/afirmativa"
+      - title: "Não, voltarei quando estiver usando um computador"
+        payload: "/negativa"
+  
+
+  utter_acesso_unifeb_digital_com_link:
+  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http//unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n https://www.loom.com/share/d4deeef9875941d0ba931ee6eaa765ac \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096. \n\n E aí, deu tudo certo?."
+    buttons:
+      - title: "Sim, consegui acesso à avaliação integradora"
+        payload: "/afirmativa"
+      - title: "Não, estou com problema e preciso de ajuda"
+        payload: "/negativa"
+
+
+  utter_ask_problems: 
+  - text: "O que esta acontecendo?"
+    buttons:
+      - title: "Não sei qual é o meu e-mail institucional"
+        payload: "/myemail"
+      - title: "Não consegui trocar a senha do e-mail instucional"
+        payload: "/fluigpassword"
+      - title: "Não sei a senha do portal do aluno"
+        payload: "/portalpassword"
+      - title: "Não entendi, desejo um tutorial mais detalhado"
+        payload: "/fulltutorial"
+
+  utter_your_email:
+  - text: "O e-mail cadastro em nosso banco de dados é: {email}. Agora que sabe seu e-mail, vamos recomeçar... \n\n"
+
+  utter_fluigpassword:
+  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096 \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas e maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
+    buttons:
+      - title: "Sim. Consegui trocar a senha e obter acesso ao UNIFEB DIGITAL. Vamos recomeçar..."
+        payload: "/afirmativa"
+      - title: "Não. Ainda estou com problemas..."
+        payload: "/negativa"
+
+  utter_fulltutorial:
+  - text: "Para acessar um tutorial completo em formato de imagem, clique no link a seguir: \n\n https://drive.google.com/file/d/1NvqPzKQTPblMI1O6y1KmD33TABeipSUe/view?usp=sharing \n\n Siga o tutorial e me informe se consegui ou não."
+    buttons:
+      - title: "Sim. Consegui acesso à Avaliação Integradora"
+        payload: "/afirmativa"
+      - title: "Não. Ainda estou com problema...s"
+        payload: "/negativa"
+
+  utter_ask_tutorials:
+  - text: "Ok, neste caso, temos duas opções, posso tentar te oferecer um tutorial detalhado ou transferir para atendimento. O que prefere?"
+    buttons:
+      - title: "Tutorial detalhado"
+        payload: "/detailtutorial"
+      - title: "Atendimento"
+        payload: "/relacionamento"
+  
+  utter_detail_tutorial_1:
+  - text: "em construção"
 
   utter_what_more:
   - text: "Posso te ajudar em algo mais?"

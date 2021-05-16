@@ -7,6 +7,27 @@
 ## intent:exaluno
 - Ex-aluno
 
+## intent:smartphone
+- celular
+
+## intent:computer
+- computador
+
+## intent:myemail
+- meu e-mail
+
+## intent:fluigpassword
+- trocar senha do fluig
+
+## intent:fulltutorial
+- tutorial completo
+
+## intent:detailtutorial
+- tutorial detalhado
+
+# intent:portalpassword
+- trocar senha do portal do aluno
+
 ## intent:greet
 - oi
 - Oi.
