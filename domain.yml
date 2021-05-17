@@ -28,6 +28,7 @@ entities:
 actions:
   - dadosAluno
   - enviarBoleto
+  - handoverAction
 
 slots:
   ra:
@@ -77,7 +78,7 @@ responses:
     buttons:
       - title: "Sim, consegui acesso à avaliação integradora"
         payload: "/afirmativa"
-      - title: "Não, estou com problema e preciso de ajuda"
+      - title: "Não, estou com problemas e preciso de ajuda"
         payload: "/negativa"
 
 
@@ -86,7 +87,7 @@ responses:
     buttons:
       - title: "Não sei qual é o meu e-mail institucional"
         payload: "/myemail"
-      - title: "Não consegui trocar a senha do e-mail instucional"
+      - title: "Não consegui trocar a senha do UNIFEB DIGITAL"
         payload: "/fluigpassword"
       - title: "Não sei a senha do portal do aluno"
         payload: "/portalpassword"
@@ -109,7 +110,7 @@ responses:
     buttons:
       - title: "Sim. Consegui acesso à Avaliação Integradora"
         payload: "/afirmativa"
-      - title: "Não. Ainda estou com problema...s"
+      - title: "Não. Ainda estou com problema..."
         payload: "/negativa"
 
   utter_ask_tutorials:
@@ -121,7 +122,8 @@ responses:
         payload: "/relacionamento"
   
   utter_detail_tutorial_1:
-  - text: "em construção"
+  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL"
+    image: "images/avalIntegradora/step1.png"
 
   utter_what_more:
   - text: "Posso te ajudar em algo mais?"

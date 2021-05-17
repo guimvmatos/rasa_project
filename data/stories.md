@@ -67,6 +67,7 @@
   - utter_fulltutorial
 * negativa
   - utter_ask_tutorials
+  - handoverAction
 
 ## tutorial_detalhado
 * detailtutorial
@@ -75,6 +76,7 @@
 ## relacionamento
 * relacionamento
   - utter_relacionamento
+  - handoverAction
 
 ## pedido de boleto_happy_path_outros
 * boleto
