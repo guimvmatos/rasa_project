@@ -57,7 +57,7 @@ responses:
   - text: "Olá, eu sou o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
 
   utter_device:
-  - text: "{nome} Para melhor ajudá-lo, por favor informe se está usando celular ou computador."
+  - text: "Olá {nome}, para melhor ajudá-lo, por favor informe se está usando celular ou computador."
     buttons:
       - title: "Celular"
         payload: "/smartphone"
@@ -124,6 +124,77 @@ responses:
   utter_detail_tutorial_1:
   - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL"
     image: "images/avalIntegradora/step1.png"
+
+  utter_detail_tutorial_1.1:
+  - text: "Podemos avançar?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não consegui"
+        payload: "/relacionamento"
+
+  utter_detail_tutorial_2:
+  - text: "Preencha os campos com seus dados e faça login"
+    image: "images/avalIntegradora/step2.png"
+  
+  utter_detail_tutorial_2.1:
+  - text: "Podemos avançar?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não sei qual é o meu e-mail institucional"
+        payload: "/myemail"
+      - title: "Não sei a senha"
+        payload: "/fluigpassword"
+
+  utter_detail_tutorial_3:
+  - text: "Localize o icone Avaliação Integradora"
+    image: "images/avalIntegradora/step3.jpg"
+
+  utter_detail_tutorial_3.1:
+  - text: "Podemos avançar?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não consegui localizar o ícone"
+        payload: "/relacionamento"
+        
+  utter_detail_tutorial_4:
+  - text: "Faça login no portal do aluno"
+    image: "images/avalIntegradora/step4.png"
+  
+  utter_detail_tutorial_4.1:
+  - text: "Podemos continuar?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não consegui fazer login no portal do aluno"
+        payload: "/portalpassword"
+
+  utter_detail_tutorial_5:
+  - text: "Agora localize e clique em Portal Avalia"
+    image: "images/avalIntegradora/step5.png"
+
+  utter_detail_tutorial_5.1:
+  - text: "Podemos continuar?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não consegui localizar o ícone"
+        payload: "/relacionamento"
+
+  utter_detail_tutorial_6:
+  - text: "Se voce chegou até esta tela, você esta pronto para realizar a prova"
+    image: "images/avalIntegradora/step6.jpg"
+
+  utter_detail_tutorial_6.1:
+  - text: "Você conseguiu chegar até aqui?"
+    buttons:
+      - title: "Sim"
+        payload: "/afirmativa"
+      - title: "Não, algo saiu errado"
+        payload: "/relacionamento"
+
 
   utter_what_more:
   - text: "Posso te ajudar em algo mais?"

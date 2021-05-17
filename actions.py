@@ -82,9 +82,8 @@ class dadosAluno(Action):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
-        sid=tracker.sender_id
 
-        return [SlotSet("nome", sid), SlotSet("email",emailf)]
+        return [SlotSet("nome", nomef), SlotSet("email",emailf)]
 
 class handoverAction(Action):
     def name(self) -> Text:

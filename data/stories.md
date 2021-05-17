@@ -69,9 +69,129 @@
   - utter_ask_tutorials
   - handoverAction
 
-## tutorial_detalhado
+## tutorial_detalhado_happy_path
 * detailtutorial
   - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* afirmativa
+  - utter_detail_tutorial_3
+  - utter_detail_tutorial_3.1
+* afirmativa
+  - utter_detail_tutorial_4
+  - utter_detail_tutorial_4.1
+* afirmativa
+  - utter_detail_tutorial_5
+  - utter_detail_tutorial_5.1
+* afirmativa
+  - utter_detail_tutorial_6
+  - utter_detail_tutorial_6.1
+* afirmativa
+  - utter_goodbye
+
+## tutorial_detalhado_unhappy_path_tutorial_1
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* relacionamento
+  - utter_relacionamento
+
+## tutorial_detalhado_unhappy_path_tutorial_2_a
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* myemail
+  - utter_your_email
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+
+## tutorial_detalhado_unhappy_path_tutorial_2_b
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* fluigpassword
+  - utter_fluigpassword
+
+## tutorial_detalhado_unhappy_path_tutorial_3
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* afirmativa
+  - utter_detail_tutorial_3
+  - utter_detail_tutorial_3.1
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
+## tutorial_detalhado_happy_path_tutorial_4
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* afirmativa
+  - utter_detail_tutorial_3
+  - utter_detail_tutorial_3.1
+* afirmativa
+  - utter_detail_tutorial_4
+  - utter_detail_tutorial_4.1
+* portalpassword
+  - utter_goodbye
+
+## tutorial_detalhado_happy_path_tutorial_5
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* afirmativa
+  - utter_detail_tutorial_3
+  - utter_detail_tutorial_3.1
+* afirmativa
+  - utter_detail_tutorial_4
+  - utter_detail_tutorial_4.1
+* afirmativa
+  - utter_detail_tutorial_5
+  - utter_detail_tutorial_5.1
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
+## tutorial_detalhado_happy_path_tutorial_6
+* detailtutorial
+  - utter_detail_tutorial_1
+  - utter_detail_tutorial_1.1
+* afirmativa
+  - utter_detail_tutorial_2
+  - utter_detail_tutorial_2.1
+* afirmativa
+  - utter_detail_tutorial_3
+  - utter_detail_tutorial_3.1
+* afirmativa
+  - utter_detail_tutorial_4
+  - utter_detail_tutorial_4.1
+* afirmativa
+  - utter_detail_tutorial_5
+  - utter_detail_tutorial_5.1
+* afirmativa
+  - utter_detail_tutorial_6
+  - utter_detail_tutorial_6.1
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
 
 ## relacionamento
 * relacionamento
