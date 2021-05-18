@@ -67,7 +67,6 @@
   - utter_fulltutorial
 * negativa
   - utter_ask_tutorials
-  - handoverAction
 
 ## tutorial_detalhado_happy_path
 * detailtutorial
