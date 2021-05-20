@@ -19,6 +19,7 @@ intents:
   - portalpassword
   - fulltutorial
   - detailtutorial
+  - avalIntegradora
 
 entities:
   - ra
@@ -54,10 +55,18 @@ responses:
   - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
   utter_ask_ra:
-  - text: "Olá, eu sou o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
+  - text: "Eu sou o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
+
+  utter_begins:
+  - text: "Olá {nome}, você precisa de ajuda para acessar a plataforma para realização da Avaliação integradora ou já obteve acesso e está com problemas?"
+    buttons:
+      - title: "Acessar a plataforma"
+        payload: "/avalIntegradora"
+      - title: "Minha prova está com erros"
+        payload: "/relacionamento"
 
   utter_device:
-  - text: "Olá {nome}, para melhor ajudá-lo, por favor informe se está usando celular ou computador."
+  - text: "Para melhor ajudá-lo, por favor informe se está usando celular ou computador."
     buttons:
       - title: "Celular"
         payload: "/smartphone"
@@ -65,7 +74,7 @@ responses:
         payload: "/computer"
 
   utter_smartphone_advice:
-  - text: "Aviso de uso com smartphone. Deseja continuar mesmo assim?"
+  - text: "É altamente aconselhável realizar a Avaliação Integradora fazendo uso de um computador, pois a avaliação pode não carregar corretamente em smartphones. \n\n Deseja continuar mesmo assim?"
     buttons:
       - title: "Sim, assumo os riscos"
         payload: "/afirmativa"
@@ -74,13 +83,20 @@ responses:
   
 
   utter_acesso_unifeb_digital_com_link:
-  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http//unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n https://www.loom.com/share/d4deeef9875941d0ba931ee6eaa765ac \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096. \n\n E aí, deu tudo certo?."
+  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http://unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n https://www.loom.com/share/d4deeef9875941d0ba931ee6eaa765ac \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096. \n\n E aí, deu tudo certo?."
     buttons:
       - title: "Sim, consegui acesso à avaliação integradora"
         payload: "/afirmativa"
       - title: "Não, estou com problemas e preciso de ajuda"
         payload: "/negativa"
 
+  utter_confirmation:
+  - text: "Agora que obteve acesso, por favor, verifique se sua prova esta correta"
+    buttons:
+      - title: "Sim, esta tudo certo. Obrigado!"
+        payload: "/afirmativa"
+      - title: "Não, minha prova esta incorreta"
+        payload: "/relacionamento"
 
   utter_ask_problems: 
   - text: "O que esta acontecendo?"
@@ -98,7 +114,7 @@ responses:
   - text: "O e-mail cadastro em nosso banco de dados é: {email}. Agora que sabe seu e-mail, vamos recomeçar... \n\n"
 
   utter_fluigpassword:
-  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096 \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas e maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
+  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096 \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas, maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
     buttons:
       - title: "Sim. Consegui trocar a senha e obter acesso ao UNIFEB DIGITAL. Vamos recomeçar..."
         payload: "/afirmativa"
@@ -225,7 +241,7 @@ responses:
   - text: "orientação para solicitar documento via e-mail"
 
   utter_relacionamento:
-  - text: "Tudo bem então, adorei conversar com você. \n\n Um momento que irei lhe transferir ao atendente de nossa CENTRAL DE RELACIONAMENTO. \n\n Após implementação, encaminha o aluno para atendimento humano."
+  - text: "Tudo bem então, adorei conversar com você. \n\n Um momento que irei lhe transferir ao atendente de nossa CENTRAL DE RELACIONAMENTO."
 
   utter_out_of_scope:
   - text: "Infelizmente não posso atender à esta solicitação. Vamos recomeçar..."

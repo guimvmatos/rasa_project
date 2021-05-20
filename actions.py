@@ -106,7 +106,7 @@ class handoverAction(Action):
             "action": "handover",
             "sessionId": tracker.sender_id,
             "actionData": {
-              "targetDepartment": "Secretaria"
+              "targetDepartment": "Test Bot2"
             }
         }
         

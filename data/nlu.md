@@ -28,6 +28,9 @@
 # intent:portalpassword
 - trocar senha do portal do aluno
 
+# intent:avalIntegradora
+- avaliação integradora
+
 ## intent:greet
 - oi
 - Oi.

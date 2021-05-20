@@ -1,18 +1,44 @@
-## iniciando_chat_happy_path
+## iniciando_chat_server_side_unhappy_path
 * get_started
   - aluno_form
   - form{"name": "aluno_form"}
   - form{"name": null}
   - dadosAluno
+  - utter_begins
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
+## iniciando_chat_server_side_happy_path
+* get_started
+  - aluno_form
+  - form{"name": "aluno_form"}
+  - form{"name": null}
+  - dadosAluno
+  - utter_begins
+* avalIntegradora
   - utter_device
 
 
-## iniciando_chat_unhappy_path
+## iniciando_chat_user_side_unhappy_path
 * greet
   - aluno_form
   - form{"name": "aluno_form"}
   - form{"name": null}
   - dadosAluno
+  - utter_begins
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
+## iniciando_chat_user_side_happy_path
+* greet
+  - aluno_form
+  - form{"name": "aluno_form"}
+  - form{"name": null}
+  - dadosAluno
+  - utter_begins
+* avalIntegradora
   - utter_device
 
 ## acesso pelo celular_afirmativa
@@ -27,11 +53,22 @@
 * negativa
   - utter_goodbye
 
-## acesso_computer_happy_path
+## acesso_computer_happy_path_corret_exam
 * computer
   - utter_acesso_unifeb_digital_com_link
 * afirmativa
+  - utter_confirmation
+* afirmativa
   - utter_goodbye
+
+## acesso_computer_happy_path_incorrect_exam
+* computer
+  - utter_acesso_unifeb_digital_com_link
+* afirmativa
+  - utter_confirmation
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
 
 ## acesso_computer_unhappy_path
 * computer
@@ -55,10 +92,13 @@
   - utter_fluigpassword
 * negativa
   - utter_relacionamento
+  - handoverAction
 
-## acesso_unifeb_digital_com_link_problem_fulltutorial_happy_path
+## acesso_unifeb_digital_com_link_problem_fulltutorial_happy_path_correct_exam
 * fulltutorial
   - utter_fulltutorial
+* afirmativa
+  - utter_confirmation
 * afirmativa
   - utter_goodbye
 
@@ -88,6 +128,8 @@
   - utter_detail_tutorial_6
   - utter_detail_tutorial_6.1
 * afirmativa
+  - utter_confirmation
+* afirmativa
   - utter_goodbye
 
 ## tutorial_detalhado_unhappy_path_tutorial_1
@@ -96,6 +138,7 @@
   - utter_detail_tutorial_1.1
 * relacionamento
   - utter_relacionamento
+  - handoverAction
 
 ## tutorial_detalhado_unhappy_path_tutorial_2_a
 * detailtutorial
@@ -221,6 +264,7 @@
   - utter_boleto
 * relacionamento
   - utter_relacionamento
+  - handoverAction
 
 ## pedido declaracao de matricula aluno
 * declaracao_matricula
