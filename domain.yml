@@ -121,6 +121,14 @@ responses:
       - title: "Não. Ainda estou com problemas..."
         payload: "/negativa"
 
+  utter_portalpassword:
+  - text: "Siga as instruções no link para baixo resetar a senha do Portal do Aluno \n\n http://bit.ly/portalalunosenha"
+    buttons:
+      - title: "Consegui resetar senha, vamos continuar"
+        payload: "/afirmativa"
+      - title: "Não consegui resetar a senha, preciso de atendimento"
+        payload: "/relacionamento"
+
   utter_fulltutorial:
   - text: "Para acessar um tutorial completo em formato de imagem, clique no link a seguir: \n\n https://drive.google.com/file/d/1NvqPzKQTPblMI1O6y1KmD33TABeipSUe/view?usp=sharing \n\n Siga o tutorial e me informe se consegui ou não."
     buttons:

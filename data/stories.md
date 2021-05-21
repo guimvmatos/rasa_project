@@ -94,6 +94,19 @@
   - utter_relacionamento
   - handoverAction
 
+## acesso_unifeb_digital_com_link_problem_portalpassword_happy_path
+* portalpassword
+  - utter_portalpassword
+* afirmativa
+  - utter_acesso_unifeb_digital_com_link
+
+## acesso_unifeb_digital_com_link_problem_portalpassword_unhappy_path
+* portalpassword
+  - utter_portalpassword
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
 ## acesso_unifeb_digital_com_link_problem_fulltutorial_happy_path_correct_exam
 * fulltutorial
   - utter_fulltutorial
@@ -190,7 +203,10 @@
   - utter_detail_tutorial_4
   - utter_detail_tutorial_4.1
 * portalpassword
-  - utter_goodbye
+  - utter_portalpassword
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
 
 ## tutorial_detalhado_happy_path_tutorial_5
 * detailtutorial
