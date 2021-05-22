@@ -15,9 +15,16 @@
 
 ## intent:myemail
 - meu e-mail
+- qual é o meu e-mail
+- não seu meu email
+- poderia me informar qual é o meu email institucional?
 
 ## intent:fluigpassword
 - trocar senha do fluig
+- trocar senha do unifeb digital
+- como trocar senha do fluig?
+- como faço para trocar a senha do unifeb digital?
+- não sei a senha do unifeb digital
 
 ## intent:fulltutorial
 - tutorial completo
@@ -27,6 +34,8 @@
 
 # intent:portalpassword
 - trocar senha do portal do aluno
+- não sei a senha do portal do aluno
+- como resetar a senha do portal do aluno?
 
 # intent:avalIntegradora
 - avaliação integradora
