@@ -1,12 +1,6 @@
 ## intent:get_started
 - get_started
 
-## intent:aluno
-- Aluno
-
-## intent:exaluno
-- Ex-aluno
-
 ## intent:smartphone
 - celular
 
@@ -53,40 +47,12 @@
 - eae
 - e aí
 
-## intent:bot_challenge
-- are you a bot?
-- are you a human?
-- am I talking to a bot?
-- am I talking to a human?
-- você é um bot?
-- você é um humano?
-- estou falando com um bot?
-- estou falando com um humano?
-- voce é uma pessoa?
-- voce é um bot?
-- voce é de verdade?
-
-## intent:boleto
-- boleto
-- gostaria de pegar o boleto para realizar o pagamento da faculdade
-- onde posso baixar o boleto para pagar?
-- como consigo o boleto da faculdade?
-- pagar o boleto
-- pagar
-
 ## intent:relacionamento
 - gostaria de falar na central de relacionamento
 - central de relacionamento
-
-## intent:declaracao_matricula
-- declaração de matricula
-- Realizei a matricula e gostaria da declaração
-- Onde posso baixar a declaração de matricula?
-- Atestado de matricula
-- gostaria do atestado de matricula
-- quero baixar o atestado de matricula
-- como posso pegar o atestado de matricula?
-- como baixar o atestado ou declaração que estou matriculado?
+- quero falar com alguem
+- gostaria de falar com atendente
+- pode me transferir para um humano?
 
 ## intent:outros_assuntos
 - outros assuntos

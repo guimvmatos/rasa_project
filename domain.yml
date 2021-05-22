@@ -1,17 +1,11 @@
 intents:
   - get_started
   - greet
-  - bot_challenge
-  - boleto
   - relacionamento
-  - declaracao_matricula
-  - outros_assuntos
   - afirmativa
   - negativa
   - ra
   - out_of_scope
-  - aluno
-  - exaluno
   - smartphone
   - computer
   - myemail
@@ -41,19 +35,6 @@ slots:
     type: unfeaturized
 
 responses:
-
-  utter_offer_options: 
-  - text: "Olá {nome}, posso te ajudar com BOLETO, ATESTADO DE MATRICULA ou outros assuntos. Sinalize qual opção posso te atender hoje"
-    buttons:
-      - title: "Boleto"
-        payload: "/boleto"
-      - title: "Declaração de matricula"
-        payload: "/declaracao_matricula"
-      - title: "Outros assuntos"
-        payload: "/outros_assuntos"
-
-  utter_iamabot:
-  - text: "Sou um bot e ainda estou em desenvolvimento. Em breve poderei te ajudar quase todas as solicitações que tiver. Atualmente, posso apenas te ajudar com boleto ou declaração de matricula. \n\n Caso deseje outro tipo de solicitação, peço que entre em contato diretamente com o setor responsável. Como posso te ajudar?"
 
   utter_ask_ra:
   - text: "Eu sou o assistente virtual da UNIFEB. Para iniciarmos seu atendimento, poderia me informar seu RA por gentileza?"
@@ -220,41 +201,14 @@ responses:
       - title: "Não, algo saiu errado"
         payload: "/relacionamento"
 
-
-  utter_what_more:
-  - text: "Posso te ajudar em algo mais?"
-
   utter_goodbye:
   - text: "Tudo bem então, adorei conversar com você. \n\n Estou à disposição de segunda-feira a sexta feira das 9h às 19h e aos sábados das 9:00 às 11:00. Tenha um ótimo dia ♥"
-
-  utter_boleto:
-  - text: "Da um checadinha no seu e-mail {email}, te encaminhei a 2ª via do boleto por lá. \n\n Caso queira o código de barras por aqui, abaixo disponibilizo o número para pagamento \n\n Esperando NIT \n\n Se o valor não estiver correto, posso lhe encaminhar ao nosso atendende da CENTRAL DE RELACIONAMENTO, para melhor analisar o valor"
-    buttons:
-      - title: "Está correto"
-        payload: "/afirmativa"
-      - title: "CENTRAL DE RELACIONAMENTO"
-        payload: "/relacionamento"
-
-  utter_declaracao_matricula:
-  - text: "Para ajuda-lo, preciso saber se é aluno ou ex-aluno"
-    buttons:
-      - title: "Aluno"
-        payload: "/aluno"
-      - title: "Ex-aluno"
-        payload: "/exaluno"
-
-  utter_declaracao_matricula_aluno:
-  - text: "disponibilizar passo a passo: como solicitar documento via portal do aluno"
-
-  utter_declaracao_matricula_exaluno:
-  - text: "orientação para solicitar documento via e-mail"
 
   utter_relacionamento:
   - text: "Tudo bem então, adorei conversar com você. \n\n Um momento que irei lhe transferir ao atendente de nossa CENTRAL DE RELACIONAMENTO."
 
   utter_out_of_scope:
   - text: "Infelizmente não posso atender à esta solicitação. Vamos recomeçar..."
-
 
 
 forms: 
