@@ -52,6 +52,7 @@
   - utter_smartphone_advice
 * negativa
   - utter_goodbye
+  - closeChatAction
 
 ## acesso_computer_happy_path_corret_exam
 * computer
@@ -60,6 +61,7 @@
   - utter_confirmation
 * afirmativa
   - utter_goodbye
+  - closeChatAction
 
 ## acesso_computer_happy_path_incorrect_exam
 * computer
@@ -114,6 +116,7 @@
   - utter_confirmation
 * afirmativa
   - utter_goodbye
+  - closeChatAction
 
 ## acesso_unifeb_digital_com_link_problem_fulltutorial_unhappy_path_detail
 * fulltutorial
@@ -144,6 +147,7 @@
   - utter_confirmation
 * afirmativa
   - utter_goodbye
+  - closeChatAction
 
 ## tutorial_detalhado_unhappy_path_tutorial_1
 * detailtutorial
@@ -273,6 +277,7 @@
   - utter_what_more
 * negativa
   - utter_goodbye
+  - closeChatAction
 
 ## pedido de boleto_unhappy_path
 * boleto

@@ -92,9 +92,6 @@ class handoverAction(Action):
     def run(self, dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-    
-        #dispatcher.utter_message(text="Sorry I couldn't solve your problem. I'm attempting to transfer you to an online agent");
-        #time.sleep(1)
 
         headers = CaseInsensitiveDict()
         headers["Content-Type"] = "application/x-www-form-urlencoded"
@@ -108,6 +105,30 @@ class handoverAction(Action):
             "actionData": {
               "targetDepartment": "Test Bot2"
             }
+        }
+        
+        response = requests.post(INCOMING_ENDPOINT_URL, headers=headers, data=payload)
+        print('Handover Endpoint response', response.content)
+
+        return []
+
+class closeChatAction(Action):
+    def name(self) -> Text:
+        return "closeChatAction"
+
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        headers = CaseInsensitiveDict()
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+        headers["Accept"] = "application/json"
+
+        INCOMING_ENDPOINT_URL = "https://unifeb.rocket.chat/api/apps/public/646b8e7d-f1e1-419e-9478-10d0f5bc74d9/incoming"
+
+        payload = {
+            "action": "close-chat",
+            "sessionId": tracker.sender_id
         }
         
         response = requests.post(INCOMING_ENDPOINT_URL, headers=headers, data=payload)

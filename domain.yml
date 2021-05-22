@@ -30,6 +30,7 @@ actions:
   - dadosAluno
   - enviarBoleto
   - handoverAction
+  - closeChatAction
 
 slots:
   ra:
@@ -83,7 +84,7 @@ responses:
   
 
   utter_acesso_unifeb_digital_com_link:
-  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http://unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n https://www.loom.com/share/d4deeef9875941d0ba931ee6eaa765ac \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096. \n\n E aí, deu tudo certo?."
+  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http://unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n http://bit.ly/tutorialemvideo \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n http://bit.ly/punifebdig. \n\n E aí, deu tudo certo?."
     buttons:
       - title: "Sim, consegui acesso à avaliação integradora"
         payload: "/afirmativa"
@@ -114,7 +115,7 @@ responses:
   - text: "O e-mail cadastro em nosso banco de dados é: {email}. Agora que sabe seu e-mail, vamos recomeçar... \n\n"
 
   utter_fluigpassword:
-  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n https://www.loom.com/share/635408f58f5c4afa852ca34f9b2fc096 \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas, maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
+  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n http://bit.ly/punifebdig \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas, maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
     buttons:
       - title: "Sim. Consegui trocar a senha e obter acesso ao UNIFEB DIGITAL. Vamos recomeçar..."
         payload: "/afirmativa"
@@ -130,7 +131,7 @@ responses:
         payload: "/relacionamento"
 
   utter_fulltutorial:
-  - text: "Para acessar um tutorial completo em formato de imagem, clique no link a seguir: \n\n https://drive.google.com/file/d/1NvqPzKQTPblMI1O6y1KmD33TABeipSUe/view?usp=sharing \n\n Siga o tutorial e me informe se consegui ou não."
+  - text: "Para acessar um tutorial completo em formato de imagem, clique no link a seguir: \n\n http://bit.ly/complettutorial \n\n Siga o tutorial e me informe se consegui ou não."
     buttons:
       - title: "Sim. Consegui acesso à Avaliação Integradora"
         payload: "/afirmativa"
@@ -146,7 +147,7 @@ responses:
         payload: "/relacionamento"
   
   utter_detail_tutorial_1:
-  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL"
+  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL \n\n https://bit.ly/tpasso1"
     image: "images/avalIntegradora/step1.png"
 
   utter_detail_tutorial_1.1:
@@ -158,7 +159,7 @@ responses:
         payload: "/relacionamento"
 
   utter_detail_tutorial_2:
-  - text: "Preencha os campos com seus dados e faça login"
+  - text: "Preencha os campos com seus dados e faça login \n\n http://bit.ly/tpasso2"
     image: "images/avalIntegradora/step2.png"
   
   utter_detail_tutorial_2.1:
@@ -172,7 +173,7 @@ responses:
         payload: "/fluigpassword"
 
   utter_detail_tutorial_3:
-  - text: "Localize o icone Avaliação Integradora"
+  - text: "Localize o icone Avaliação Integradora \n\n http://bit.ly/tpasso3"
     image: "images/avalIntegradora/step3.jpg"
 
   utter_detail_tutorial_3.1:
@@ -184,7 +185,7 @@ responses:
         payload: "/relacionamento"
         
   utter_detail_tutorial_4:
-  - text: "Faça login no portal do aluno"
+  - text: "Faça login no portal do aluno \n\n http://bit.ly/tpasso4"
     image: "images/avalIntegradora/step4.png"
   
   utter_detail_tutorial_4.1:
@@ -196,7 +197,7 @@ responses:
         payload: "/portalpassword"
 
   utter_detail_tutorial_5:
-  - text: "Agora localize e clique em Portal Avalia"
+  - text: "Agora localize e clique em Portal Avalia \n\n http://bit.ly/tpasso5"
     image: "images/avalIntegradora/step5.png"
 
   utter_detail_tutorial_5.1:
@@ -208,7 +209,7 @@ responses:
         payload: "/relacionamento"
 
   utter_detail_tutorial_6:
-  - text: "Se voce chegou até esta tela, você esta pronto para realizar a prova"
+  - text: "Se voce chegou até esta tela, você esta pronto para realizar a prova \n\n http://bit.ly/tpasso6"
     image: "images/avalIntegradora/step6.jpg"
 
   utter_detail_tutorial_6.1:
