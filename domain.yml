@@ -207,8 +207,6 @@ responses:
   utter_relacionamento:
   - text: "Tudo bem então, adorei conversar com você. \n\n Um momento que irei lhe transferir ao atendente de nossa CENTRAL DE RELACIONAMENTO."
 
-  utter_out_of_scope:
-  - text: "Infelizmente não posso atender à esta solicitação. Vamos recomeçar..."
 
 
 forms: 
