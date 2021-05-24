@@ -82,7 +82,8 @@ class dadosAluno(Action):
         nomef=reply['nome_completo']
         celularf=reply['celular']
         emailf=reply['email']
-
+        #input = tracker.latest_message["text"]
+        #print(input)
         return [SlotSet("nome", nomef), SlotSet("email",emailf)]
 
 class handoverAction(Action):
