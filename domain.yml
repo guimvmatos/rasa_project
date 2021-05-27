@@ -140,7 +140,7 @@ responses:
         payload: "/relacionamento"
 
   utter_detail_tutorial_2:
-  - text: "Preencha os campos com seus dados e faça login \n\n http://bit.ly/tpasso2"
+  - text: "Preencha os campos com seus dados e faça login \n\n http://encurtador.com.br/OQ017"
     image: "images/avalIntegradora/step2.png"
   
   utter_detail_tutorial_2.1:
@@ -154,7 +154,7 @@ responses:
         payload: "/fluigpassword"
 
   utter_detail_tutorial_3:
-  - text: "Localize o icone Avaliação Integradora \n\n http://bit.ly/tpasso3"
+  - text: "Localize o icone Avaliação Integradora \n\n https://cutt.ly/4nupY0V"
     image: "images/avalIntegradora/step3.jpg"
 
   utter_detail_tutorial_3.1:
