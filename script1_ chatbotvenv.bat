@@ -1,1 +1,1 @@
-conda activate chatbotvenv && pause
+conda activate chatbotvenv
