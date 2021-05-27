@@ -128,7 +128,7 @@ responses:
         payload: "/relacionamento"
   
   utter_detail_tutorial_1:
-  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL \n\n https://bit.ly/tpasso1 \n\n https://raw.githubusercontent.com/guimvmatos/rasa_project/aval_int_clean/images/avalIntegradora/step1.png"
+  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL \n\n https://bit.ly/tpasso1 \n\n http://unifeb.edu.br/uploads/banners/banner_154_1.jpg"
     image: "images/avalIntegradora/step1.png"
 
   utter_detail_tutorial_1.1:
