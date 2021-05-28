@@ -65,7 +65,7 @@ responses:
   
 
   utter_acesso_unifeb_digital_com_link:
-  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http://unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n http://bit.ly/tutorialemvideo \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n http://bit.ly/punifebdig. \n\n E aí, deu tudo certo?."
+  - text: "O acesso à Avaliação Integradora se da por meio da plataforma UNIFEB DIGITAL, disponível no site http://unifeb.edu.br . Temos um vídeo tutorial onde você poderá ver um passo a passo para acesso à prova. Você pode assisti-lo clicando no link abaixo \n\n http://unifeb.edu.br/uploads/NISI/avaliacao_integradora.mp4 \n\n Você precisará do seu e-mail institucional @unifeb.edu.br e senha para acesso à plataforma. Caso não possua ou não lembre sua senha, siga as orientações deste outro vídeo: \n\n http://unifeb.edu.br/uploads/NISI/reset_senha_fluig.mp4. \n\n E aí, deu tudo certo?."
     buttons:
       - title: "Sim, consegui acesso à avaliação integradora"
         payload: "/afirmativa"
@@ -96,7 +96,7 @@ responses:
   - text: "O e-mail cadastro em nosso banco de dados é: {email}. Agora que sabe seu e-mail, vamos recomeçar... \n\n"
 
   utter_fluigpassword:
-  - text: "Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo: \n\n http://bit.ly/punifebdig \n\n É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas, maiúsculas, números e símbolos. \n\n Conseguiu trocar a senha?"
+  - text: Para trocar a senha do UNIFEB DIGITAL, siga as instruções do vídeo abaixo http://unifeb.edu.br/uploads/NISI/reset_senha_fluig.mp4 É importante salientar que, sua senha deverá ter OBRIGATORIAMENTE letras minúsculas, maiúsculas, números e símbolos. Conseguiu trocar a senha?
     buttons:
       - title: "Sim. Consegui trocar a senha e obter acesso ao UNIFEB DIGITAL. Vamos recomeçar..."
         payload: "/afirmativa"
@@ -104,7 +104,7 @@ responses:
         payload: "/negativa"
 
   utter_portalpassword:
-  - text: "Siga as instruções no link para baixo resetar a senha do Portal do Aluno \n\n http://bit.ly/portalalunosenha"
+  - text: Siga as instruções no link para baixo resetar a senha do Portal do Aluno <img src="http://unifeb.edu.br/uploads/NISI/procedimento_para_reset_de_senha_do_portal_do_aluno.png" width="400">
     buttons:
       - title: "Consegui resetar senha, vamos continuar"
         payload: "/afirmativa"
@@ -112,7 +112,7 @@ responses:
         payload: "/relacionamento"
 
   utter_fulltutorial:
-  - text: "Para acessar um tutorial completo em formato de imagem, clique no link a seguir: \n\n http://bit.ly/complettutorial \n\n Siga o tutorial e me informe se consegui ou não."
+  - text: Para acessar um tutorial completo em formato de imagem, clique no link a seguir <a href="http://unifeb.edu.br/uploads/NISI/tutorial_avaliação_integradora.png" target="_blank"> <img src="http://unifeb.edu.br/uploads/NISI/tutorial_avaliação_integradora.png" width="400"> </a> Siga o tutorial e me informe se consegui ou não.
     buttons:
       - title: "Sim. Consegui acesso à Avaliação Integradora"
         payload: "/afirmativa"
@@ -128,8 +128,8 @@ responses:
         payload: "/relacionamento"
   
   utter_detail_tutorial_1:
-  - text: "Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL \n\n https://bit.ly/tpasso1 \n\n http://unifeb.edu.br/uploads/banners/banner_154_1.jpg"
-    image: "images/avalIntegradora/step1.png"
+  - text: Entre em http://www.unifeb.edu.br e clique em UNIFEB DIGITAL <img src="http://unifeb.edu.br/uploads/NISI/step1.png" width="400">
+    image: "http://unifeb.edu.br/uploads/NISI/step1.png"
 
   utter_detail_tutorial_1.1:
   - text: "Podemos avançar?"
@@ -140,7 +140,7 @@ responses:
         payload: "/relacionamento"
 
   utter_detail_tutorial_2:
-  - text: "Preencha os campos com seus dados e faça login \n\n http://encurtador.com.br/OQ017"
+  - text: Preencha os campos com seus dados e faça login <img src="http://unifeb.edu.br/uploads/NISI/step2.png" width="400">
     image: "images/avalIntegradora/step2.png"
   
   utter_detail_tutorial_2.1:
@@ -154,7 +154,7 @@ responses:
         payload: "/fluigpassword"
 
   utter_detail_tutorial_3:
-  - text: "Localize o icone Avaliação Integradora \n\n https://cutt.ly/4nupY0V"
+  - text: Localize o icone Avaliação Integradora <img src="http://unifeb.edu.br/uploads/NISI/step3.jpg" width="400">
     image: "images/avalIntegradora/step3.jpg"
 
   utter_detail_tutorial_3.1:
@@ -166,7 +166,7 @@ responses:
         payload: "/relacionamento"
         
   utter_detail_tutorial_4:
-  - text: "Faça login no portal do aluno \n\n http://bit.ly/tpasso4"
+  - text: Faça login no portal do aluno <img src="http://unifeb.edu.br/uploads/NISI/step4.png" width="400">
     image: "images/avalIntegradora/step4.png"
   
   utter_detail_tutorial_4.1:
@@ -178,7 +178,7 @@ responses:
         payload: "/portalpassword"
 
   utter_detail_tutorial_5:
-  - text: "Agora localize e clique em Portal Avalia \n\n http://bit.ly/tpasso5"
+  - text: Agora localize e clique em Portal Avalia <img src="http://unifeb.edu.br/uploads/NISI/step5.png" width="400">
     image: "images/avalIntegradora/step5.png"
 
   utter_detail_tutorial_5.1:
@@ -190,7 +190,7 @@ responses:
         payload: "/relacionamento"
 
   utter_detail_tutorial_6:
-  - text: "Se voce chegou até esta tela, você esta pronto para realizar a prova \n\n http://bit.ly/tpasso6"
+  - text: Se voce chegou até esta tela, você esta pronto para realizar a prova <img src="http://unifeb.edu.br/uploads/NISI/step6.jpg" width="400">
     image: "images/avalIntegradora/step6.jpg"
 
   utter_detail_tutorial_6.1:
