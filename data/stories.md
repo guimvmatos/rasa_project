@@ -41,13 +41,21 @@
 * avalIntegradora
   - utter_device
 
+## reforço
+* avalIntegradora
+  - utter_device
+
 ## acesso pelo celular_afirmativa
+* avalIntegradora
+  - utter_device
 * smartphone
   - utter_smartphone_advice
 * afirmativa
   - utter_acesso_unifeb_digital_com_link
 
 ## acesso_celular_negativa
+* avalIntegradora
+  - utter_device
 * smartphone
   - utter_smartphone_advice
 * negativa
@@ -55,6 +63,8 @@
   - closeChatAction
 
 ## acesso_computer_happy_path_corret_exam
+* avalIntegradora
+  - utter_device
 * computer
   - utter_acesso_unifeb_digital_com_link
 * afirmativa
@@ -64,6 +74,8 @@
   - closeChatAction
 
 ## acesso_computer_happy_path_incorrect_exam
+* avalIntegradora
+  - utter_device
 * computer
   - utter_acesso_unifeb_digital_com_link
 * afirmativa
