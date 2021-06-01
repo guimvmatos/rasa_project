@@ -73,6 +73,19 @@
   - utter_goodbye
   - closeChatAction
 
+  ## acesso_smartphone_happy_path_corret_exam
+* avalIntegradora
+  - utter_device
+* smartphone
+  - utter_smartphone_advice
+* afirmativa
+  - utter_acesso_unifeb_digital_com_link
+* afirmativa
+  - utter_confirmation
+* afirmativa
+  - utter_goodbye
+  - closeChatAction
+
 ## acesso_computer_happy_path_incorrect_exam
 * avalIntegradora
   - utter_device
@@ -84,8 +97,29 @@
   - utter_relacionamento
   - handoverAction
 
+  ## acesso_smartphone_happy_path_incorrect_exam
+* avalIntegradora
+  - utter_device
+* smartphone
+  - utter_smartphone_advice
+* afirmativa
+  - utter_acesso_unifeb_digital_com_link
+* afirmativa
+  - utter_confirmation
+* relacionamento
+  - utter_relacionamento
+  - handoverAction
+
 ## acesso_computer_unhappy_path
 * computer
+  - utter_acesso_unifeb_digital_com_link
+* negativa
+  - utter_ask_problems
+
+  ## acesso_computer_unhappy_path
+* smartphone
+  - utter_smartphone_advice
+* afirmativa
   - utter_acesso_unifeb_digital_com_link
 * negativa
   - utter_ask_problems

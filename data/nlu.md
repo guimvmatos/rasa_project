@@ -25,11 +25,11 @@
 
 ## intent:fulltutorial
 - tutorial completo
-- Não entendi, desejo um tutorial mais detalhado
 
 ## intent:detailtutorial
 - tutorial detalhado
 - Tutorial detalhado
+- Não entendi, desejo um tutorial mais detalhado
 
 # intent:portalpassword
 - trocar senha do portal do aluno
